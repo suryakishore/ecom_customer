@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:paddingBottom="@dimen/ten_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemCategoriesName"
+            style="@style/Text.18sp.Black.RalewayBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:text="@string/categories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemCategoriesViewMore"
+            style="@style/Text.12sp.EastBayColor.RalewayMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/five_dp"
+            android:text="@string/homeViewMore"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHomeItemCategoriesName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvHomeItemCategoriesName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeItemSubCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/seven_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeItemCategoriesName"
+            app:spanCount="2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeSlidingPanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twelve_dp"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/zero_dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvHomeItemSubCategories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="@dimen/three_dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:orientation="horizontal"
+        android:id="@+id/mainContentLl">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="en"
+            android:id="@+id/langTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/muli_regular"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:textColor="@color/colorMirage"
+            android:textSize="@dimen/fourteen_sp"
+            android:gravity="start"
+            android:textAlignment="viewStart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/content_descriptor"
+            app:srcCompat="@drawable/ic_check_off"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:id="@+id/selectIv"
+            android:tint="@color/app_color" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/one_dp"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:background="@color/colorwildsand" />
+
+</LinearLayout>

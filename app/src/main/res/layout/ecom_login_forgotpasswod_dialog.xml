@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingBottom="@dimen/thirty_dp"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDialogChooseCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:layout_marginEnd="@dimen/sixteen_dp"
+        app:srcCompat="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDialogChooseSubHeaderText"
+        style="@style/Text.12sp.PoppinsRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:text="@string/loginResetPasswordDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogChooseHeaderText" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvForgotPasswordPhone"
+        style="@style/Text.14sp.colorBlackApprox.PoppinsMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/twentyEight_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:background="@drawable/round_corner"
+        android:drawableStart="@drawable/ic_all_phone"
+        android:drawablePadding="@dimen/twenty_dp"
+        android:paddingStart="@dimen/thirty_dp"
+        android:paddingLeft="@dimen/thirty_dp"
+        android:paddingTop="@dimen/fourteen_dp"
+        android:paddingEnd="@dimen/thirty_dp"
+        android:paddingRight="@dimen/thirty_dp"
+        android:paddingBottom="@dimen/fourteen_dp"
+        android:text="@string/loginForgotPasswordPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogChooseSubHeaderText" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvForgotPasswordEmail"
+        style="@style/Text.14sp.colorBlackApprox.PoppinsMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/seventeen_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:background="@drawable/round_corner"
+        android:drawableStart="@drawable/ic_all_mail"
+        android:drawablePadding="@dimen/twenty_dp"
+        android:paddingStart="@dimen/thirty_dp"
+        android:paddingLeft="@dimen/thirty_dp"
+        android:paddingTop="@dimen/fourteen_dp"
+        android:paddingEnd="@dimen/thirty_dp"
+        android:paddingRight="@dimen/thirty_dp"
+        android:paddingBottom="@dimen/fourteen_dp"
+        android:text="@string/loginForgotPasswordEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPasswordPhone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDialogChooseHeaderText"
+        style="@style/Text.20sp.BlackApproxColor.poppins_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:text="@string/loginResetPasswordText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDialogChooseCancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

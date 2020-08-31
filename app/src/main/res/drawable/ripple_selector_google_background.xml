@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white">
+
+
+    <item>
+
+        <selector>
+
+            <item
+                android:drawable="@drawable/google_bg_selected_state"
+                android:state_enabled="true" />
+            <item
+                android:drawable="@drawable/google_bg_unselected_bg"
+                android:state_enabled="false" />
+            <item
+                android:drawable="@drawable/google_bg_unselected_bg"
+                android:state_pressed="true" />
+            <item
+                android:drawable="@drawable/google_bg_unselected_bg"
+                android:state_focused="true" />
+            <item
+                android:drawable="@drawable/google_bg_unselected_bg" />
+
+        </selector>
+
+    </item>
+
+
+</ripple>

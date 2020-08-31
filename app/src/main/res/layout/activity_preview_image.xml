@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".customer.fivecanale.preview.PreviewImageActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.preview.PreviewImageViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPreviewImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allBlackColor">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPreviewImgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:onClick="@{() -> viewModel.onBackIconClicked()}"
+            android:paddingTop="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/twenty_dp"
+            android:tint="@color/allWhiteColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/all_back" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpPreviewImages"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/hundred_dp"
+            android:background="@color/allWhiteColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPreviewImgBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/allLightBlackColor"
+            android:paddingTop="@dimen/twenty_dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductRating"
+                style="@style/Text.12sp.White.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:background="@color/colorProductBackgroundDetails"
+                android:drawableEnd="@drawable/pdp_rating_start"
+                android:drawablePadding="@dimen/seven_dp"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingTop="@dimen/three_dp"
+                android:paddingEnd="@dimen/eight_dp"
+                android:paddingBottom="@dimen/three_dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvPreViewImgDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="4.5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreViewImgTitle"
+                style="@style/Text.16sp.White.PoppinsMedium"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvProductRating"
+                app:layout_constraintTop_toTopOf="@+id/tvProductRating"
+                tools:text="2,19,063 ratings" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreViewImgDesc"
+                style="@style/Text.12sp.ProductBag.PoppinsRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginBottom="@dimen/fifteen_dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toTopOf="@+id/tvPreviewImgPersonDet"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="I have been using Pexpo for almost a year for my 6 year old who just throws away things. Very durable. Best Performance" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewImgPersonDet"
+                style="@style/Text.12sp.Gey.PoppinsMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toTopOf="@+id/tvPreviewImgDate"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Jessica Banks, Delhi " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewImgDate"
+                style="@style/Text.12sp.gey.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Jessica Banks, Delhi" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPreviewImgOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:onClick="@{() -> viewModel.onMenuClick()}"
+                android:padding="@dimen/ten_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/options" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewImgDislikeCount"
+                style="@style/Text.12sp.gey.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:drawableStart="@drawable/pdp_dislike"
+                android:drawablePadding="@dimen/eight_dp"
+                android:includeFontPadding="false"
+
+                android:onClick="@{() -> viewModel.onDisLikeClick()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivPreviewImgOptions"
+                tools:text="646" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewImgLikeCount"
+                style="@style/Text.12sp.gey.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eighteen_dp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:drawableStart="@drawable/pdp_like"
+                android:drawablePadding="@dimen/eight_dp"
+                android:includeFontPadding="false"
+                android:onClick="@{() -> viewModel.onLikeClick()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvPreviewImgDislikeCount"
+                tools:text="646" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

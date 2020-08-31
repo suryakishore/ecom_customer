@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.customer.fivecanale.boarding.login.EcomLoginActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.boarding.login.EcomLoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/background">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvLoginScroll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/fiftyFive_dp"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/clSignUp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:paddingBottom="@dimen/twentyFive_dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLoginLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/login_logo" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLoginFaceBook"
+                    style="@style/Text.15sp.White.PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginLeft="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginRight="@dimen/twenty_dp"
+                    android:background="@drawable/ripple_selector_cham_bray"
+                    android:drawableStart="@drawable/ic_face_book"
+                    android:drawablePadding="-40dp"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:onClick="@{() -> viewModel.onFaceBookLoginClicked()}"
+                    android:paddingStart="@dimen/fifteen_dp"
+                    android:paddingLeft="@dimen/five_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingEnd="@dimen/five_dp"
+                    android:paddingRight="@dimen/five_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:text="@string/loginWithFb"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLoginOr" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLoginGoogle"
+                    style="@style/Text.15sp.Black.PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginLeft="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginRight="@dimen/twenty_dp"
+                    android:background="@drawable/ripple_selector_google_background"
+                    android:drawableStart="@drawable/ic_google"
+                    android:drawablePadding="-40dp"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:onClick="@{() -> viewModel.onGoogleLoginClicked()}"
+                    android:paddingStart="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingEnd="@dimen/five_dp"
+                    android:paddingRight="@dimen/five_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:text="@string/loginWithGoogle"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLoginFaceBook" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLoginPhone"
+                    style="@style/Text.15sp.White.PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginLeft="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginRight="@dimen/twenty_dp"
+                    android:background="@drawable/ripple_selector_royal_blue"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="-40dp"
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:onClick="@{() -> viewModel.onPhoneIconClicked()}"
+                    android:paddingStart="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingEnd="@dimen/five_dp"
+                    android:paddingRight="@dimen/five_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:text="@string/loginWithNumber"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLoginGoogle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewLeft"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLoginOr"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLoginOr"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvLoginOr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLoginOr"
+                    style="@style/Text.15dp.alto.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text="@string/loginOr"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewRight"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLoginOr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvLoginOr"
+                    app:layout_constraintTop_toTopOf="@+id/tvLoginOr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLogin"
+                    style="@style/Text.15sp.White.PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginLeft="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/eighteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginRight="@dimen/twenty_dp"
+                    android:background="@drawable/ripple_selector"
+                    android:btnEnabled="@{viewModel.btnEnabled}"
+                    android:drawablePadding="-30dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:onClick="@{() -> viewModel.onLoginButtonClicked()}"
+                    android:paddingLeft="@dimen/five_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingEnd="@dimen/five_dp"
+                    android:paddingRight="@dimen/five_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toBottomOf="@+id/clLoginInputs"
+                    tools:targetApi="lollipop" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clLoginInputs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/thirtyFive_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLoginLogo">
+
+
+                    <View
+                        android:id="@+id/viewPhoneNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        android:layout_marginLeft="@dimen/twenty_dp"
+                        android:layout_marginTop="@dimen/two_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:layout_marginRight="@dimen/twenty_dp"
+                        android:background="@{viewModel.backgroundColor}"
+                        app:layout_constraintTop_toBottomOf="@+id/clLoginPhoneNumber"
+
+                        />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLoginShow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/thirty_two_sp"
+                        android:elevation="@dimen/ten_dp"
+                        android:onClick="@{() -> viewModel.onTextShowClicked()}"
+                        android:paddingStart="@dimen/zero_dp"
+                        android:paddingTop="@dimen/fifteen_dp"
+                        android:paddingEnd="@dimen/twentyFive_dp"
+                        android:paddingBottom="@dimen/fifteen_dp"
+                        android:visibility="@{viewModel.passwordShowIcon}"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tiLoginEmail"
+                        app:srcCompat="@drawable/all_show_password" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLoginForgotPassword"
+                        style="@style/Text.10dp.PrimaryTextColor.RalewayRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:gravity="end"
+                        android:onClick="@{() -> viewModel.onForgotPasswordClicked()}"
+                        android:text="@string/loginForgotPassword"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tiLoginPassword" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clLoginPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        android:layout_marginLeft="@dimen/twenty_dp"
+                        android:layout_marginTop="@dimen/twentyEight_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:layout_marginRight="@dimen/twenty_dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLoginPhoneLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_all_phone" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiLoginPhoneNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ErrorMessage="@{viewModel.errorPhoneNumMsg}"
+                            android:hint="@string/allPhoneNumber"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ccpGetNumber"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etLoginPhoneNumber"
+                                style="@style/Text.15sp.PrimaryTextColor.poppinsMedium"
+                                clearOnFocusAndDispatch="@{() -> viewModel.onPhoneNumberFocus()}"
+                                hasFocus="@{() -> viewModel.onPhoneNumberHasFocus()}"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:inputType="phone"
+                                android:onTextChanged="@{viewModel::onTextChangePhoneNumber}"
+                                android:paddingTop="@dimen/five_dp"
+                                android:paddingBottom="@dimen/ten_dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccpGetNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:ccpDialog_showCloseIcon="true"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_autoDetectLanguage="true"
+                            app:ccp_hintExampleNumber="false"
+                            app:ccp_showNameCode="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/ivLoginPhoneLogo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/vgLoginMailAndPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tiLoginEmail,tiLoginPassword,tvLoginForgotPassword" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/vgPhoneNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="clLoginPhoneNumber,viewPhoneNum" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiLoginPassword"
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        android:layout_marginLeft="@dimen/twenty_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:layout_marginRight="@dimen/twenty_dp"
+                        android:hint="@string/loginPassWord"
+                        android:textColorHint="@color/colorBlackApprox"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tiLoginEmail">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etLoginPassword"
+                            style="@style/Text.15sp.PrimaryTextColor.poppinsMedium"
+                            clearOnFocusAndDispatch="@{() -> viewModel.onPasswordFocus()}"
+                            hasFocus="@{() -> viewModel.onPasswordHasFocus()}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/all_password"
+                            android:drawablePadding="@dimen/twenty_dp"
+                            android:inputType="textPassword"
+                            android:onTextChanged="@{viewModel::onTextChangePassword}"
+                            android:paddingStart="@dimen/zero_dp"
+                            android:singleLine="true"
+                            android:paddingTop="@dimen/ten_dp"
+                            android:paddingEnd="@dimen/fifty_dp"
+                            android:paddingBottom="@dimen/twenty_dp"
+                            android:textAllCaps="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiLoginEmail"
+                        style="@style/TextLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        android:layout_marginLeft="@dimen/twenty_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:layout_marginRight="@dimen/twenty_dp"
+                        android:ErrorMessage="@{viewModel.errorEmailMsg}"
+                        android:hint="@string/loginEmail"
+                        android:textColorHint="@color/colorBlackApprox"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etLoginEmail"
+                            style="@style/Text.15sp.PrimaryTextColor.poppinsMedium"
+                            clearOnFocusAndDispatch="@{() -> viewModel.onEmailFocus()}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/ic_all_mail"
+                            android:drawablePadding="@dimen/fifteen_dp"
+                            android:inputType="textEmailAddress"
+                            android:onTextChanged="@{viewModel::onUserEmailChanged}"
+                            android:paddingBottom="@dimen/twenty_dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.50" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLoginCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/three_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:onClick="@{() -> viewModel.onCrossIconClicked()}"
+            android:padding="@dimen/five_dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/all_cross_icon" />
+
+
+        <ProgressBar
+            android:id="@+id/pbLoginShowProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorRed"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSignUp"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorProductBackground"
+            android:paddingTop="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLoginSwipeRight"
+                style="@style/Text.12sp.darkBlackColor.poppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/two_dp"
+                android:includeFontPadding="false"
+                android:text="@string/loginDontHaveAccountSwipe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvLoginNewAccount"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLoginNewAccount"
+                style="@style/Text.12dp.allEastBayColor.poppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:includeFontPadding="false"
+                android:onClick="@{() -> viewModel.onCreateNewAccountClicked()}"
+                android:text="@string/loginCreateNewAccount"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLoginSwipeRight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLoginSwipeRight"
+                app:layout_constraintTop_toTopOf="@+id/tvLoginSwipeRight" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

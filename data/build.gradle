@@ -1,0 +1,55 @@
+import dependencies.Deps
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: Deps.dependency
+apply plugin: 'checkstyle'
+apply from: "$rootDir/ktlint.gradle"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        resValue "string", "APP_ID", "com.customer.shoppd"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    checkstyle {
+        configFile rootProject.file('commonFiles/codestyle/google_checks.xml')
+        toolVersion = "8.4"
+        showViolations true
+        ignoreFailures false
+    }
+    task checkStyle(type: Checkstyle) {
+        source 'src'
+        include '**/*.java'
+        exclude '**/gen/**'
+        exclude '**/BuildConfig.java'
+        exclude '**/R.java'
+        exclude '**/models/**'
+        exclude '**/mData/**'
+        exclude '**/test/**'
+        exclude '**/androidTest/**'
+        showViolations true
+        classpath = files()
+        reports {
+            xml.enabled true
+            html.enabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+

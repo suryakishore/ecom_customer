@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.fivecanale.cancelorder.CancelOrderOrProductActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.cancelorder.CancelOrderOrProductViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <include
+                    android:id="@+id/includeCartHeader"
+                    layout="@layout/layout_cross_btn_header"
+                    bind:viewModel="@{viewModel}" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="@dimen/fifty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twentyFive_dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/includeCartHeader"
+                    app:srcCompat="@{viewModel.imageUrl, default=@drawable/logo}" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProductName"
+                    style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="@{viewModel.productName}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivProduct"
+                    app:layout_constraintTop_toTopOf="@+id/ivProduct"
+                    tools:text="sndcmsMcklsm dmv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProductPrice"
+                    style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.productPrice}"
+                    app:layout_constraintLeft_toRightOf="@+id/ivProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+
+                <View
+                    android:id="@+id/viewPdpPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/one_dp"
+                    android:background="@color/allNobelColor"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPdpProductActualPrice"
+                    app:layout_constraintEnd_toEndOf="@+id/tvPdpProductActualPrice"
+                    app:layout_constraintStart_toStartOf="@+id/tvPdpProductActualPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvPdpProductActualPrice" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPdpProductActualPrice"
+                    style="@style/Text.14sp.Nobel.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:text="@{viewModel.productActualPrice}"
+                    app:layout_constraintLeft_toRightOf="@+id/tvProductPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+                    tools:text="2,087.00" />
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgPdpOfferPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.offerViews}"
+                    app:constraint_referenced_ids="tvPdpProductActualPrice,viewPdpPrice" />
+
+
+                <View
+                    android:id="@+id/viewCancelProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivProduct" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReasonCancellation"
+                    style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/cancelReasonForCancellation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/viewCancelProduct" />
+
+                <View
+                    android:id="@+id/viewReasonCancellation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReasonCancellation" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiCancelOrderReason"
+                    style="@style/Text.13sp.ApproxBlack.PoppinsLight"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginRight="@dimen/twenty_dp"
+                    android:hint="@string/cancelReasonForCancellation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/viewReasonCancellation">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCancelOrderReason"
+                        style="@style/Text.13sp.ApproxBlack.PoppinsMed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/all_right_arrow"
+                        android:onClick="@{() -> viewModel.selectReason()}"
+                        android:paddingBottom="@dimen/ten_dp">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etComments"
+                    style="@style/Text.13sp.ApproxBlack.PoppinsMed"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:hint="@string/cancelOrderComments"
+
+                    android:onTextChanged="@{viewModel::onCommentsChanged}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiCancelOrderReason">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+
+                <View
+                    android:id="@+id/viewComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etComments" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRefundStatus"
+                    style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/cancelOrderRefundStatus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/viewComments" />
+
+                <View
+                    android:id="@+id/viewRefundStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRefundStatus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRefundStatusDesc"
+                    style="@style/Text.13sp.ApproxBlack.poppinsLight"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text="@string/cancelRefundStatusText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/viewRefundStatus" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubmitRequest"
+            style="@style/Text.14sp.White.PoppinsRegular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:background="@drawable/ripple_pdp_color_eastbay_selector"
+            android:enabled="false"
+            android:gravity="center_horizontal"
+            android:onClick="@{() -> viewModel.submitRequest()}"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:paddingBottom="@dimen/fifteen_dp"
+            android:text="@string/cancelSubmitRequest"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

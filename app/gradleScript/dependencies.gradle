@@ -1,0 +1,95 @@
+import dependencies.Deps
+
+dependencies {
+
+    //App Module
+    implementation project(Deps.Module.domain)
+    implementation project(Deps.Module.remote)
+    implementation project(Deps.Module.data)
+    implementation project(Deps.Module.cache)
+    implementation project(Deps.Module.stripe)
+    implementation project(Deps.Module.simpleCrop)
+
+    //MlKit
+    implementation Deps.MlKit.mlVision
+
+    //Paging
+    implementation Deps.Paging.paging
+
+
+    implementation Deps.Lifecycle.lifeCycleExtension
+
+    //Dagger2
+    implementation Deps.Dagger.dagger2
+    implementation Deps.Dagger.daggerAndroid
+    implementation Deps.Dagger.daggerAndroidSupport
+    kapt Deps.Dagger.processor
+    kapt Deps.Dagger.compiler
+
+    //firebase
+    implementation Deps.Firebase.firebase_message
+    implementation Deps.Firebase.firebase_invite
+    implementation Deps.Firebase.firebase_crashlytics
+    implementation Deps.Firebase.firebase_analytics
+
+    //location
+    implementation Deps.Location.gms_location
+    implementation Deps.Location.gms_maps
+    implementation Deps.Location.gms_places
+    implementation Deps.Location.gms_auth
+
+    //places
+    implementation Deps.Places.google_places
+
+    //libPhone number
+    implementation Deps.libPhoneNumber.lib_phone_number
+
+    //face book
+    implementation Deps.faceBook.face_book
+    //card view
+    implementation Deps.cardView.card_view
+    //mqtt
+    implementation Deps.mqtt.paho_mqtt
+    implementation Deps.mqtt.paho_mqtt_service
+
+    //multidex
+    implementation Deps.mulitiDex.multi_dex
+
+    //appcompat
+    implementation Deps.appcompat.appcompat
+    //material
+    implementation Deps.material.material
+
+    //material
+    implementation Deps.fragment.fragment
+    //constraintLayout
+    implementation Deps.constraintLayout.constraint_layout
+    //io_card
+    implementation Deps.io_card.io_card
+
+    //j_soup
+    implementation Deps.jsoup.jsoup
+
+    //lotte
+    implementation Deps.lotte.lotte
+
+    //countryCode
+    implementation Deps.countryCode.country_code
+    //Retrofit
+    implementation Deps.OkHttp3.loggingInterceptor
+    implementation Deps.OkHttp3.okHttp3
+    implementation Deps.Retrofit2.adapterRxjava2
+    implementation Deps.Retrofit2.converterGson
+    implementation Deps.Retrofit2.retrofit
+    implementation Deps.RxJava.rxAndroid
+
+    //gilde
+    implementation Deps.gilde
+
+    //legacy supprt
+    implementation Deps.legacy_support
+    compileOnly(Deps.javax_annotation)
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}

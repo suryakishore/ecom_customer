@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPromoCodeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five_dp"
+        android:background="@drawable/rectangle_light_white"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:paddingTop="@dimen/fifteen_dp"
+        android:paddingBottom="@dimen/fifteen_dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPromoCode"
+            style="@style/Text.16sp.hippieGreen.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            tools:text="BENG150"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApply"
+            style="@style/Text.16sp.AppColor.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:text="@string/apply"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPromoCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPromoCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOfferDes"
+            style="@style/Text.14sp.Black.PoppinsRegular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            tools:text="Enjoy a flat 50% OFF with the STORE coupons
+            on orders from your favourite STORES"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvPromoCode"
+            app:layout_constraintTop_toBottomOf="@+id/tvPromoCode" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/view"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/black_dash_line"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="@+id/tvPromoCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOfferDes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvValidDate"
+            style="@style/Text.14sp.Black.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            tools:text="valid till Jan 2020"
+            app:layout_constraintStart_toStartOf="@+id/tvPromoCode"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMore"
+            style="@style/Text.14sp.AppColor.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:visibility="gone"
+            android:text="@string/allMore"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvValidDate"
+            app:layout_constraintBottom_toBottomOf="@+id/tvValidDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

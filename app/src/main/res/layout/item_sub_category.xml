@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivExpandable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubCatName"
+            style="@style/Text.14sp.Black.PoppinsMed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:ellipsize="end"
+            android:lines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/ivExpandable"
+            app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+            app:layout_constraintStart_toEndOf="@+id/ivExpandable"
+            app:layout_constraintTop_toTopOf="@+id/ivExpandable" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:src="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSubCatName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvSubCatName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubSubCatList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvSubCatName"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubCatName" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@color/altoLight"
+            app:layout_constraintTop_toBottomOf="@+id/rvSubSubCatList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

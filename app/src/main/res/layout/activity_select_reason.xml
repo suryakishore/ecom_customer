@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".customer.fivecanale.selectreason.SelectReasonActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.selectreason.SelectReasonModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSelectReason"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/includeCartHeader"
+            layout="@layout/layout_cross_btn_header"
+            bind:viewModel="@{viewModel}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSelectReason"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/tvSubmitRequest"
+            app:layout_constraintTop_toBottomOf="@+id/includeCartHeader" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubmitRequest"
+            style="@style/Text.14sp.White.PoppinsRegular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:background="@drawable/ripple_pdp_color_eastbay_selector"
+            android:gravity="center_horizontal"
+            android:onClick="@{() -> viewModel.save()}"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:paddingBottom="@dimen/fifteen_dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

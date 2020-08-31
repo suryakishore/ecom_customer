@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.filter.ProductFilterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilterCat"
+            android:layout_width="@dimen/oneTwenty_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:background="@color/desert_storm"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/clFooter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilterSubCat"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/clFooter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rvFilterCat"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader" />
+
+
+        <com.customer.fivecanale.util.ShimmerLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toTopOf="@+id/clFooter"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader">
+
+            <include
+                layout="@layout/shimmer_all_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+        </com.customer.fivecanale.util.ShimmerLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clFooter"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="@dimen/five_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductCount"
+                style="@style/Text.15sp.Black.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFilterProductCount"
+                app:layout_constraintStart_toStartOf="@+id/tvFilterProductCount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFilterProductCount"
+                style="@style/Text.12sp.Black.PoppinsReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:text="@string/productsFound"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductCount" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFilterApply"
+                style="@style/Text.12sp.White.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:background="@drawable/app_color_rect_ripple_effect"
+                android:paddingStart="@dimen/fifty_dp"
+                android:paddingEnd="@dimen/fifty_dp"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isProgressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

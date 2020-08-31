@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <string name="app_name">Shoppd</string>
+    <string name="dbName">delivxdb</string>
+    <string name="domain">delivx.page.link</string>
+    <string name="IosAppStoreIdForShare">1315028442</string>
+    <string name="IosAppVersiion">1315028442</string>
+    <string name="IosAppName">com.</string>
+    <string name="host">delivx_intent_return</string>
+    <string name="scheme">delivx</string>
+    <string name="google_key">AIzaSyCusjWDpv1uiHIxptCojSLVBSJWTAJz9JA</string>
+
+    <!--common strings-->
+    <string name="content_descriptor">&#8230;&#8230;&#8230;</string>
+    <string name="networkslow">Network Not Available or too slow please check</string>
+    <string name="somethingWentWrong">Oops ! Something went wrong.Please try again</string>
+    <string name="serverError">Internal server error</string>
+    <string name="locationPermission">Please allow DelivX to access this device’s locationData</string>
+    <string name="customer_">customer_</string>
+    <string name="gettingLoc">Getting your current locationData</string>
+    <string name="enableLoc">Enable Location Services</string>
+    <string name="currentLoc">Current Location</string>
+    <string name="notDelivery">Sorry, we don’t deliver to this locality</string>
+    <string name="bad_quality">Bad quality</string>
+    <!--
+    <string name="currency">$ \</string>
+-->
+    <string name="percentage">% \</string>
+    <string name="ok">OK</string>
+    <string name="gotIt">GOT IT</string>
+    <string name="det_my_loc">DETECT MY LOCATION</string>
+    <string name="set_location">Set locationData</string>
+    <string name="manually"> manually</string>
+    <string name="deliveryLocation">DELIVERY LOCATION</string>
+    <string name="searchAddress">Search Address</string>
+    <string name="guestLogin">guestLogin</string>
+    <string name="userLogin">userLogin</string>
+    <string name="openTime">Opens Today at</string>
+    <string name="todayDeal">Today\'s Deals</string>
+    <string name="openTimeTomorrow">Opens Tomorrow at</string>
+    <string name="storeClose">Closed</string>
+    <!--string for login activity-->
+    <string name="login_small">Login</string>
+    <string name="enter_phoneNumber">Enter your phone number to proceed</string>
+    <string name="enterValidPhoneNumber">please enter valid phoneNumber</string>
+    <string name="enterValidPassword">please enter valid password</string>
+    <string name="phone_number_caps">PHONE NUMBER</string>
+    <string name="default_notification_channel_id">1</string>
+    <!--string for home activity-->
+
+
+    <string name="alert">Alert</string>
+    <string name="replace_cart">Replace cart item?</string>
+    <string name="appSetting">App Setting</string>
+    <string name="reGrantPermissionMsg">You have denied the required permission. Please, grant to proceed further."</string>
+    <string name="sessionExp">Your session has expired, please login again</string>
+    <string name="cartColor">Color:</string>
+    <string name="cartMore">+More</string>
+
+    <!--add on-->
+    <string name="repeatLastAddOn">Repeat last used customization ?</string>
+    <string name="iLlChoose">I\'ll Choose</string>
+    <string name="repeatLast">Repeat Last</string>
+
+    <!--string for home activity-->
+    <string name="viewAll">View All</string>
+    <string name="addcart">Add To Cart</string>
+    <string name="close">Close</string>
+    <string name="addItem">Add Item</string>
+    <string name="add">Add</string>
+    <string name="selectedStore">Selected Store</string>
+    <string name="allStore">All Stores</string>
+    <string name="undergoingVerification">Your profile is undergoing verification</string>
+    <string name="profileIncomplete">Your Profile is incomplete.</string>
+    <string name="changeName">Change Name</string>
+    <string name="changeMail">Change Email</string>
+    <string name="changePhone">Change Phone</string>
+    <string name="topBrand">Top Brands</string>
+    <string name="dealEnds">Deal Ends in:</string>
+
+    <!--home frag-->
+    <string name="lowestPrice">Every day lowest price</string>
+
+    <!--cart frag-->
+    <string name="noItemsInCart">No items in your cart</string>
+    <string name="noItemsInHistory">No items in your History</string>
+    <string name="noActiveOrders">No Active Orders</string>
+    <string name="noPastOrders">No Past Orders</string>
+    <string name="noDebits">No Debits</string>
+    <string name="noCredits">No Credits</string>
+    <string name="customisation">Customize</string>
+    <string name="myProfile">My Profile</string>
+
+    <string name="cartTotal">To Pay</string>
+    <string name="deliveryType">Delivery type</string>
+    <string name="selHowToGetOrder">Select how do want to get your order</string>
+    <string name="pickUp">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="nowOrderDescription">Now orders are meant to place orders where the courier delivers your order ASAP </string>
+    <string name="on">on</string>
+    <string name="schedule">Schedule</string>
+    <string name="scheduleOrderDesc">Scheduled orders are meant to place orders where the courier delivers your order at the selected delivery slot</string>
+    <string name="yourPaymentBreakDown">Payment Breakdown </string>
+    <string name="placeTheOrder">Place the order</string>
+    <string name="subTotal">Sub Total</string>
+    <string name="savings">Your Savings</string>
+    <string name="tax">Taxes</string>
+
+
+    <!--history frag-->
+    <string name="history">History</string>
+    <string name="activeorder">Active order</string>
+    <string name="pastorder">Past order</string>
+
+    <string name="help">Help</string>
+    <string name="reorder">Reorder</string>
+    <string name="details">Details</string>
+    <string name="asap">ASAP</string>
+
+    <string name="driverAtStore">Your order is ready!</string>
+    <string name="cancelledByManager">Cancelled by manager</string>
+    <string name="cancelledByCustomer">Cancelled by customer.</string>
+    <string name="processingPayment">ProcessingPayment</string>
+    <string name="rejectedByManager">Rejected by manager</string>
+    <string name="acceptedByManager">Your Order has been accepted!</string>
+    <string name="orderReady">Your Order is ready.</string>
+    <string name="orderPicked">Order picked.</string>
+    <string name="orderCompleted">Your Order is completed.</string>
+    <string name="driverAccept">Your food is being prepared.</string>
+    <string name="driverCancelled">Rejected by driver.</string>
+    <string name="driverOnTheWay">Driver is Enroute to Store.</string>
+
+    <string name="driverReached">Your order will soon be at your door step.</string>
+    <string name="driverToCustomer">Enroute to Customer.\'</string>
+    <string name="cancelledByDriver">Cancelled by driver.</string>
+    <string name="orderDuetimeUpdated">Order due time updated.</string>
+    <string name="centralDispatch">central dispatch.</string>
+    <string name="orderExpired">Order expired.</string>
+    <string name="orderUnassigned">Order Unassigned.</string>
+
+    <string name="enterMsgHere">Type Message</string>
+    <string name="helpSend">Send</string>
+    <string name="bid">Bid</string>
+    <string name="id">ID:</string>
+    <!--Store act-->
+
+    <string name="trendingProduct">Trending Products</string>
+    <string name="milesaway">KM AWAY</string>
+    <string name="rating">Rating</string>
+    <string name="menu">Menu</string>
+    <string name="thc">THC</string>
+    <string name="cbd">CBD</string>
+    <string name="item">item</string>
+    <string name="allItems">Items</string>
+    <string name="addNewItems">Add new items</string>
+    <string name="deliveryCharge">Delivery Charge</string>
+    <string name="store">store</string>
+    <string name="off">OFF</string>
+    <string name="quantityOrdered">0</string>
+    <string name="freeDel">away from delivery from this store</string>
+    <string name="fixedDel">fixed fee applicable</string>
+    <string name="cart">Cart</string>
+
+    <!--login-->
+    <string name="passWordCaps">PASSWORD</string>
+    <string name="forgetPassword">Forgot password ?</string>
+
+    <!--sign up-->
+    <string name="createanAccountWithNew">Create a new</string>
+    <string name="account">account</string>
+    <string name="iHaveReferalCode">I have a refferal code</string>
+    <string name="rulesOfApp">By creating this account, you agree to our </string>
+    <string name="termsAndConditions">Terms &amp; Conditions</string>
+    <string name="emailAddress">EMAIL ADDRESS</string>
+    <string name="referalcode">REFERRAL CODE</string>
+
+    <!--verify otp-->
+    <string name="verifyNo">Verify Number</string>
+    <string name="enterOtp">please enter six digits otp.</string>
+
+    <string name="clickHere">Click here to </string>
+
+    <!--strings for uploadIdentity activity-->
+    <string name="save">Save</string>
+    <string name="uploadIdentity">UPLOAD IDENTITY</string>
+    <string name="uploadIdentityAndMMJCard">Upload your identity &amp; Medical card</string>
+    <string name="skip">Skip</string>
+    <string name="identityCard">Identity Card</string>
+    <string name="uploadAnyGovernmentCard">Upload any government issued\nidentity card</string>
+    <string name="mmjCard">MEDICAL CARD</string>
+    <string name="uploadMMjCard">Upload your Medical card</string>
+    <string name="dontHaveMMJcard">Don\'t have a Medical card? </string>
+
+    <string name="getOne">Get one</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="uploadedSuccess">Updated successfully</string>
+    <string name="thankyou">Thank you for submitting the document, our account verification team will validate the document and will send notification when verification compleated</string>
+
+    <!--strings for otp-->
+    <string name="verificationCode">VERIFICATION CODE</string>
+    <string name="didntGetCode">Didn\'t get code?</string>
+    <string name="resend">Resend</string>
+    <string name="invite">Invite</string>
+    <string name="verifyAndProceed">VERIFY OTP</string>
+    <string name="enterMobileAndEmailAddress">Enter your Mobile Number /  Email address and you will get verification code /  link to reset password</string>
+    <string name="phoneNumber">Phone</string>
+    <string name="verify_code_sent">Verification code sent to</string>
+
+    <string name="or">OR</string>
+    <string name="next">NEXT</string>
+    <string name="forgotPassword">Forgot Password</string>
+    <string name="selectCountry">Select Country</string>
+    <string name="typeCountry">Type Country</string>
+    <string name="done">Done</string>
+    <string name="createNewList">Create new list </string>
+    <string name="confirm">Confirm</string>
+    <string name="enterNameForList">Enter a name for your list</string>
+
+    <!--strings for reset all_password-->
+    <string name="enterNewPassword">Enter New Password</string>
+    <string name="mobileNumberVerified">Mobile Number Verified Enter Your new Password</string>
+    <string name="yourNewPassword">YOUR NEW PASSWORD</string>
+    <string name="reEnterPassword">RE-ENTER PASSWORD </string>
+    <string name="update">UPDATE</string>
+    <string name="replaceItem">Replace cart item?</string>
+    <string name="singleCart">Your cart contains items from a different store. Would you like to reset your cart before browsing this store? </string>
+
+    <!--payments-->
+    <string name="validThru">Valid\nThru</string>
+
+    <!--profile frag-->
+    <string name="faqs">FAQs</string>
+    <string name="language">Language</string>
+    <string name="helpCenter">Help center</string>
+    <string name="referFriends">Refer your friends</string>
+    <string name="wishList">WishList</string>
+    <string name="manageAddress">Manage Addresses</string>
+    <string name="creditAndDebitCard">Credit/Debit Cards</string>
+    <string name="wallet">Wallet</string>
+    <string name="versionV">v</string>
+
+    <string name="updatePhoneNumberAndEmail">Update your phone number and email address.</string>
+    <string name="uploadNewImage">Upload new image</string>
+
+    <string name="verified">Verified</string>
+    <string name="edit">Edit</string>
+    <string name="hi">Hi</string>
+
+
+    <!--Item details -->
+    <string name="unit">Unit</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="description">Description</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="effect">Effects</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="chnageQnt">Change Qnt</string>
+    <string name="remove">Remove</string>
+    <string name="inCart">IN CART</string>
+    <string name="favourite">Favorites</string>
+    <string name="favourited">Favorited</string>
+    <string name="addToList">Add To List</string>
+    <string name="disclaimerInfo">Product information added or displayed may not be current or complete, always refer the physical package for the most accurate information and warnings, for more information contact the actual manufacturer or dealers. *Some items weights, like produce are measured by shoppers using in- aisle scales. the name of the items from deli, meat and seafood counters are determined by label applied in-store to that item</string>
+
+
+    <!--manage address -->
+    <string name="add_new_address">Add new address</string>
+    <string name="addAddress">Add Address</string>
+    <string name="noSavedAddress">No saved addresses</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="other">Others</string>
+    <string name="savedAddress">Saved Addresses</string>
+    <string name="delete">Delete</string>
+    <string name="selectAddress">Select Address</string>
+    <string name="selectSaveAs">please select save as</string>
+    <string name="addrExist">This address already added, choose another</string>
+
+    <!--add address-->
+    <string name="saveDeliveryLocation">Delivery address</string>
+    <string name="housenO">HOUSE/FLAT NO</string>
+    <string name="landMark">LANDMARK</string>
+    <string name="saveAs">SAVE AS</string>
+    <string name="saveAddress">Save Address</string>
+
+    <!--payment option-->
+    <string name="xxx">**** **** ****</string>
+    <string name="addNewCard">Add New Card</string>
+    <string name="save_card">Save card detail</string>
+    <string name="pay">Pay</string>
+
+    <!--fav-->
+    <string name="nofav">No favourite items</string>
+    <string name="favourites">Favorites</string>
+    <string name="delete_card">Delete</string>
+    <string name="make_card_default">Make As Default</string>
+    <string name="your_card_details">Details</string>
+
+    <!--wish list-->
+    <string name="addListName">Please enter a name for your list</string>
+
+
+    <!--Refer your frnd-->
+    <string name="noPromoCode">No Promo code available.</string>
+    <!--ratings act-->
+    <string name="rateExp">RATE YOUR EXPERIENCE</string>
+    <string name="leaveTip">LEAVE TIP FOR DRIVER</string>
+    <string name="improve">Whats things to improve ?</string>
+    <string name="submit">Submit</string>
+    <!--check out -->
+    <string name="now">Now</string>
+    <string name="selectDate">Select Date</string>
+    <string name="selectSlot">Select Slot</string>
+    <string name="delliveryLoc">Delivery Location</string>
+    <string name="address">ADDRESS</string>
+    <string name="selectPayment">Select Payment</string>
+    <string name="itemTotalTxt">Sub Total:</string>
+    <string name="discount">Discount:</string>
+    <string name="deliveryChargeTxt">Delivery Charge:</string>
+    <string name="TotalTxt">To Pay</string>
+    <string name="cash">Cash</string>
+    <string name="success">Success</string>
+    <string name="keepChange">Please keep exact change handy to help us serve you better.</string>
+    <string name="orderSuccessMsg">Yay! You have placed your order successfully</string>
+
+
+    <string name="enterCouponCode">Enter your coupon code</string>
+    <string name="coupon">Coupons</string>
+    <string name="minCartAmt">MIN CART AMOUNT</string>
+    <string name="validTill">Valid Till</string>
+    <string name="orderConfirmed">Order Confirmed</string>
+    <string name="conformationMsg">Order Placed. Waiting for confirmation…</string>
+    <string name="driverAssigned">Driver Assigned</string>
+    <string name="orderPickedUp">Order Picked Up</string>
+    <string name="driverAtDeliveryLoc">Driver at Delivery Location</string>
+    <string name="orderDel">Order Delivered</string>
+    <string name="paymentoptions">Payment Options</string>
+    <string name="savedcards">Saved cards</string>
+    <string name="addDescription">Add discription</string>
+    <string name="deleteList">Delete list</string>
+    <string name="updateImage">Update Image</string>
+    <string name="noItemsInYourWishList">No wish list</string>
+
+    <string name="offers">Offers</string>
+    <string name="goodMarijuanaismeanttobeshraed">Get people to signup on the DelivX app "\n" with your referral code and earn discounts</string>
+    <string name="share">SHARE</string>
+    <string name="referFriendShare">Share</string>
+    <string name="share1">INVITE YOUR FRIENDS</string>
+    <string name="helpWithThisOrder">Help with this order</string>
+    <string name="issueWithPreviusOrders">Issue With Previous orders </string>
+    <string name="helpWithOtherQueries">Help with other queries</string>
+    <string name="generalQueries">General Queries</string>
+    <string name="legal">Legal</string>
+    <string name="preOrders">Previous Orders</string>
+    <string name="addMoney">Add Money</string>
+    <string name="sureForlogout">Are you sure you want to logout?</string>
+    <string name="sureFordelete">Are you sure you want to delete?</string>
+
+    <string name="balance">Current cash balance</string>
+
+    <string name="insufficientBal">You have in sufficient balance choose other payment method.</string>
+
+
+    <!--Laundry-->
+
+    <string name="quantity">Quantity</string>
+    <string name="itemName">Item Name</string>
+    <string name="enetrQuan">Enter Quantity</string>
+    <string name="customOrder">Custom Order Instructions</string>
+    <string name="specialIns">Any special instruction</string>
+    <string name="selectOption">please select an option for the following instructions</string>
+    <string name="checkOut">checkout</string>
+    <string name="addItems">Add Items</string>
+    <string name="collectionSlot">Collection Slot</string>
+    <string name="pickUpLoc">PICKUP LOCATION</string>
+    <string name="sameAsPickupAddress">Same as pickup address</string>
+    <string name="laundryType">LAUNDRY TYPE</string>
+    <string name="normalOrderDesc">There is no extra charge for delivery. turnaround time is minimum 48 hours.</string>
+    <string name="express">Express</string>
+    <string name="expressOrderDesc">The value of the express delivery  depends on weight of the laundry.turnaround time is less than 12 hours.</string>
+    <string name="collectionAndDeliverySlot">COLLECTION &amp; DELIVERY SLOT</string>
+    <string name="timeSlot">Choose time slot</string>
+    <string name="dateSlot">Choose date slot</string>
+    <string name="Slot">Delivery Slot</string>
+    <string name="expressCharge">Express Charge:</string>
+    <string name="pickUpChare">Pickup Charge:</string>
+    <string name="dropChare">Drop Charge:</string>
+    <string name="internetIssue">Please check internet and try again.</string>
+    <string name="select">Select</string>
+
+
+    <string name="applyCoupon">Apply Coupon</string>
+    <string name="payYourOrder">Now pay your order using Ticket Restaurants\nMeal Card.Add your card details</string>
+    <string name="payOnDel">Pay On Delivery</string>
+    <string name="noCardsSaved">No Cards Saved</string>
+    <string name="startShopping">Start Shopping</string>
+    <string name="scanCard">Scan Card</string>
+    <string name="updated">Update</string>
+    <string name="apply">Apply</string>
+    <string name="SavedAddresses">Saved Addressses</string>
+    <string name="recentSearches">Recent Searches</string>
+    <string name="results">Results</string>
+    <string name="enterValidListName">Name can\'t be empty.\nplease enter valid list name</string>
+    <string name="DeleteConfirmation">Delete Confirmation</string>
+
+    <string name="free">Free</string>
+
+    <string name="order_id">Order Id:</string>
+    <string name="canceled_image">canceled Image</string>
+    <string name="placedOn">Placed on</string>
+    <string name="finalAmountToPay">Final amount to pay</string>
+    <string name="newOrder">Order Placed.</string>
+    <string name="toPay">To Pay</string>
+    <string name="mutliplySign">*</string>
+
+    <string name="delivered">Your Order is Delivered</string>
+
+    <string name="trackOrder">Track Order</string>
+    <string name="chat">Chat</string>
+    <string name="taxes">Taxes</string>
+    <string name="paidViaCard">Paid via Card</string>
+    <string name="paidViacash">Paid via Cash</string>
+    <string name="i_haven_t_receved_this_order">I haven\'t receved this order</string>
+    <string name="cancelOrderWarning">Are you sure you want to cancel \nthe order?</string>
+    <string name="no_product">We do not have the product you requested!</string>
+    <string name="ops_no_product">OOPs! We dont have this product at this moment. However there is another stire(s) that does havethis product and also delivers to your address.</string>
+    <string name="popular_suggestions">Popular Searches</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <!--SERACH FRAGMENT-->
+    <string name="filter">Refine and Sort</string>
+    <string name="refine">REFINE</string>
+    <string name="sort">Sort</string>
+    <string name="profileIcon">profile icon</string>
+    <string name="downArrow">Down Arrow Icon</string>
+    <string name="etSearch">Search</string>
+    <string name="tvSuperMarket">Supermarket</string>
+    <string name="tvSuperMarketDetail">DelivXs</string>
+    <string name="tvRestaurant">Restaurant</string>
+    <string name="supermarket">Supermarket</string>
+    <string name="tvOthers">Others</string>
+    <string name="Liquor">Liquor</string>
+    <string name="arrowIcon">Arrow Icon</string>
+    <string name="filtersIcon">Filters Icon</string>
+    <string name="tvRestaurants">Restaurants</string>
+    <string name="searchIcon">Search Icon</string>
+    <string name="tvItemType">Fast food</string>
+    <string name="tvRating">0.0</string>
+    <string name="favouritesIcon">Favourites Icon</string>
+    <string name="tvDistanceValue">Far away</string>
+    <string name="tvItemPriceValue">Far Two</string>
+    <string name="tvRecommended">Recommended</string>
+    <string name="btnAdd">ADD</string>
+    <string name="ratingIcon">RatingIcon</string>
+    <string name="btnMenu">MENU</string>
+    <string name="cartIcon">CartIcon</string>
+    <string name="tvViewCart">VIEW CART</string>
+    <string name="addToCart">Add To Cart</string>
+    <string name="ivClose">closeIcon</string>
+    <string name="tvFilter">Filter</string>
+    <string name="tvFilterTitle">Color</string>
+    <string name="tvFilterType">Cost For Two</string>
+    <string name="tvSuperMarketType">Household items</string>
+    <string name="searchIn">in</string>
+
+    <!--resturant -->
+    <string name="km">KMs</string>
+    <string name="miles">KM</string>
+    <string name="oos">Out of Stock</string>
+
+
+    <!--wallet act-->
+    <string name="debits">Debit</string>
+    <string name="credits">Credit</string>
+    <string name="allTransactions">All</string>
+
+    <string name="recentTransction">Recent Transactions</string>
+    <string name="have_vocher">Have a voucher code ?</string>
+    <string name="redeem">Redeem</string>
+    <string name="voucher_code">Voucher code</string>
+    <string name="payUsingCard">Pay Using Card</string>
+    <string name="Amount">Amount</string>
+    <string name="softLimit">Soft Limit:</string>
+    <string name="hardLimit">Hard Limit:</string>
+    <string name="addMoneyConfirm">Are you sure you want to recharge your wallet with</string>
+    <string name="softLimitDesc">About to reach maximum cash credit limit</string>
+    <string name="hardLimitDesc">Maximum cash credit limit hit and no cash booking will be allowed till dues are paid</string>
+
+    <!--all categories-->
+    <string name="popularCategories">Popular Categories</string>
+    <!--countryCodes List-->
+    <string-array name="countryNameList">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Australian External Territories</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia (Plurinational State of)</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei Darussalam</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Myanmar (Burma)</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cabo Verde</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Christmas Island</item>
+        <item>Cocos Islands</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Comoros</item>
+        <item>Democratic Republic of the Congo</item>
+        <item>Cook Islands</item>
+        <item>Costa Rica</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Timor-Leste</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Falkland Islands</item>
+        <item>Faroe Islands</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>French Polynesia</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Gibraltar</item>
+        <item>Greece</item>
+        <item>Greenland</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>GY-Guyana</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Hong Kong</item>
+        <item>Hungary</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran(Islamic Republic of)</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Isle of Man</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Côte d’Ivoire</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Lao</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macau</item>
+        <item>Macedonia(FYROM)</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mayotte</item>
+        <item>Mexico</item>
+        <item>Micronesia (Federated States of)</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>Netherlands Antilles</item>
+        <item>New Caledonia</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Niue</item>
+        <item>North Korea</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Pitcairn Islands</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Puerto Rico</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russian Federation</item>
+        <item>Rwanda</item>
+        <item>Saint Barthelemy</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>Korea</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Saint Helena</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syrian Arab Republic</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Togo</item>
+        <item>Tokelau</item>
+        <item>Tonga</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>United Arab Emirates</item>
+        <item>Uganda</item>
+        <item>United Kingdom</item>
+        <item>Ukraine</item>
+        <item>Uruguay</item>
+        <item>United States of America</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Viet Nam</item>
+        <item>Wallis and Futuna</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string-array name="CountryCodesList">
+        <item>+93,AF</item>
+        <item>+355,AL</item>
+        <item>+213,DZ</item>
+        <item>+376,AD</item>
+        <item>+244,AO</item>
+        <item>+672,AQ</item>
+        <item>+54,AR</item>
+        <item>+374,AM</item>
+        <item>+297,AW</item>
+        <item>+61,AU</item>
+        <item>+43,AT</item>
+        <item>+994,AZ</item>
+        <item>+973,BH</item>
+        <item>+880,BD</item>
+        <item>+375,BY</item>
+        <item>+32,BE</item>
+        <item>+501,BZ</item>
+        <item>+229,BJ</item>
+        <item>+975,BT</item>
+        <item>+591,BO</item>
+        <item>+387,BA</item>
+        <item>+267,BW</item>
+        <item>+55,BR</item>
+        <item>+673,BN</item>
+        <item>+359,BG</item>
+        <item>+226,BF</item>
+        <item>+95,MM</item>
+        <item>+257,BI</item>
+        <item>+855,KH</item>
+        <item>+237,CM</item>
+        <item>+1,CA</item>
+        <item>+238,CV</item>
+        <item>+236,CF</item>
+        <item>+235,TD</item>
+        <item>+56,CL</item>
+        <item>+86,CN</item>
+        <item>+61,CX</item>
+        <item>+61,CC</item>
+        <item>+57,CO</item>
+        <item>+269,KM</item>
+        <item>+242,CG</item>
+        <item>+243,CD</item>
+        <item>+682,CK</item>
+        <item>+506,CR</item>
+        <item>+385,HR</item>
+        <item>+53,CU</item>
+        <item>+357,CY</item>
+        <item>+420,CZ</item>
+        <item>+45,DK</item>
+        <item>+253,DJ</item>
+        <item>+670,TL</item>
+        <item>+593,EC</item>
+        <item>+20,EG</item>
+        <item>+503,SV</item>
+        <item>+240,GQ</item>
+        <item>+291,ER</item>
+        <item>+372,EE</item>
+        <item>+251,ET</item>
+        <item>+500,FK</item>
+        <item>+298,FO</item>
+        <item>+679,FJ</item>
+        <item>+358,FI</item>
+        <item>+33,FR</item>
+        <item>+689,PF</item>
+        <item>+241,GA</item>
+        <item>+220,GM</item>
+        <item>+995,GE</item>
+        <item>+49,DE</item>
+        <item>+233,GH</item>
+        <item>+350,GI</item>
+        <item>+30,GR</item>
+        <item>+299,GL</item>
+        <item>+502,GT</item>
+        <item>+224,GN</item>
+        <item>+245,GW</item>
+        <item>+592,GY</item>
+        <item>+509,HT</item>
+        <item>+504,HN</item>
+        <item>+852,HK</item>
+        <item>+36,HU</item>
+        <item>+91,IN</item>
+        <item>+62,ID</item>
+        <item>+98,IR</item>
+        <item>+964,IQ</item>
+        <item>+353,IE</item>
+        <item>+44,IM</item>
+        <item>+972,IL</item>
+        <item>+39,IT</item>
+        <item>+225,CI</item>
+        <item>+81,JP</item>
+        <item>+962,JO</item>
+        <item>+7,KZ</item>
+        <item>+254,KE</item>
+        <item>+686,KI</item>
+        <item>+965,KW</item>
+        <item>+996,KG</item>
+        <item>+856,LA</item>
+        <item>+371,LV</item>
+        <item>+961,LB</item>
+        <item>+266,LS</item>
+        <item>+231,LR</item>
+        <item>+218,LY</item>
+        <item>+423,LI</item>
+        <item>+370,LT</item>
+        <item>+352,LU</item>
+        <item>+853,MO</item>
+        <item>+389,MK</item>
+        <item>+261,MG</item>
+        <item>+265,MW</item>
+        <item>+60,MY</item>
+        <item>+960,MV</item>
+        <item>+223,ML</item>
+        <item>+356,MT</item>
+        <item>+692,MH</item>
+        <item>+222,MR</item>
+        <item>+230,MU</item>
+        <item>+262,YT</item>
+        <item>+52,MX</item>
+        <item>+691,FM</item>
+        <item>+373,MD</item>
+        <item>+377,MC</item>
+        <item>+976,MN</item>
+        <item>+382,ME</item>
+        <item>+212,MA</item>
+        <item>+258,MZ</item>
+        <item>+264,NA</item>
+        <item>+674,NR</item>
+        <item>+977,NP</item>
+        <item>+31,NL</item>
+        <item>+599,AN</item>
+        <item>+687,NC</item>
+        <item>+64,NZ</item>
+        <item>+505,NI</item>
+        <item>+227,NE</item>
+        <item>+234,NG</item>
+        <item>+683,NU</item>
+        <item>+850,KP</item>
+        <item>+47,NO</item>
+        <item>+968,OM</item>
+        <item>+92,PK</item>
+        <item>+680,PW</item>
+        <item>+507,PA</item>
+        <item>+675,PG</item>
+        <item>+595,PY</item>
+        <item>+51,PE</item>
+        <item>+63,PH</item>
+        <item>+870,PN</item>
+        <item>+48,PL</item>
+        <item>+351,PT</item>
+        <item>+1,PR</item>
+        <item>+974,QA</item>
+        <item>+40,RO</item>
+        <item>+7,RU</item>
+        <item>+250,RW</item>
+        <item>+590,BL</item>
+        <item>+685,WS</item>
+        <item>+378,SM</item>
+        <item>+239,ST</item>
+        <item>+966,SA</item>
+        <item>+221,SN</item>
+        <item>+381,RS</item>
+        <item>+248,SC</item>
+        <item>+232,SL</item>
+        <item>+65,SG</item>
+        <item>+421,SK</item>
+        <item>+386,SI</item>
+        <item>+677,SB</item>
+        <item>+252,SO</item>
+        <item>+27,ZA</item>
+        <item>+82,KR</item>
+        <item>+34,ES</item>
+        <item>+94,LK</item>
+        <item>+290,SH</item>
+        <item>+508,PM</item>
+        <item>+249,SD</item>
+        <item>+597,SR</item>
+        <item>+268,SZ</item>
+        <item>+46,SE</item>
+        <item>+41,CH</item>
+        <item>+963,SY</item>
+        <item>+886,TW</item>
+        <item>+992,TJ</item>
+        <item>+255,TZ</item>
+        <item>+66,TH</item>
+        <item>+228,TG</item>
+        <item>+690,TK</item>
+        <item>+676,TO</item>
+        <item>+216,TN</item>
+        <item>+90,TR</item>
+        <item>+993,TM</item>
+        <item>+688,TV</item>
+        <item>+971,AE</item>
+        <item>+256,UG</item>
+        <item>+44,GB</item>
+        <item>+380,UA</item>
+        <item>+598,UY</item>
+        <item>+1,US</item>
+        <item>+998,UZ</item>
+        <item>+678,VU</item>
+        <item>+39,VA</item>
+        <item>+58,VE</item>
+        <item>+84,VN</item>
+        <item>+681,WF</item>
+        <item>+967,YE</item>
+        <item>+260,ZM</item>
+        <item>+263,ZW</item>
+    </string-array>
+    <string name="tvPickup">PICKUP</string>
+    <string name="tvDelivery">DELIVERY</string>
+    <string name="tvClear">Clear</string>
+    <string name="dash">-</string>
+    <string name="tvChange">CHANGE</string>
+    <string name="tvItemTotal">Item Total</string>
+    <string name="tvHelpCenter">Help center</string>
+    <string name="tvOffers">Offers</string>
+    <string name="tvMyOrders">My orders</string>
+    <string name="myAccount">My Account</string>
+    <string name="tvPayment">Payment</string>
+    <string name="tvManageAddress">Manage addresses</string>
+    <string name="tvFavourites">Favorites</string>
+    <string name="tvWishlist">Wish list</string>
+    <string name="tvLanguage">Language</string>
+    <string name="logout">Logout</string>
+    <string name="dot">•</string>
+    <string name="tvAvilableOffers">Available Offers</string>
+    <string name="ivSale">SaleIcon</string>
+    <string name="tvDiscountStatus">Uniquely benchmark</string>
+    <string name="tvDiscountDesc">technically sound growth</string>
+    <string name="tvOrderDetails">Order Details</string>
+    <string name="orderSubmited">Order submited</string>
+    <string name="tvOrderOnWayStatus">Order is on the way</string>
+    <string name="tvArrive">Arrived at locationData</string>
+    <string name="tvOrderComplete">Order completed</string>
+    <string name="rateOrder">Rate this Order</string>
+    <string name="favouriteProduct">Favorite products</string>
+    <string name="tvFreeDelivery">Free delivery</string>
+    <string name="tvMoreProduct">MORE PRODUCTS</string>
+    <string name="stores">Stores</string>
+    <string name="tvSignUpText">Enter your details to create new account</string>
+    <string name="tvFullName">FULL NAME</string>
+    <string name="tvEmail">EMAIL</string>
+    <string name="tvHaveAccount">Do you have an account?</string>
+    <string name="tvSignIn">SIGN IN</string>
+    <string name="signin">Sign in</string>
+    <string name="tvSignintext">Enter your phone number to proceed</string>
+    <string name="dontHaveAccount">Don’t have an account?</string>
+
+    <!--Help Center-->
+    <string name="helpcenter">Help Center</string>
+    <string name="priorityUrgent">Urgent</string>
+    <string name="priorityHigh">High</string>
+    <string name="priorityNormal">Normal</string>
+    <string name="priorityLow">Low</string>
+    <string name="status">Status</string>
+    <string name="newTicket">New Ticket</string>
+    <string name="ticket">Ticket</string>
+    <string name="helpSubject">Subject</string>
+    <string name="Clear">Clear</string>
+    <string name="searchResult">Search Results</string>
+    <string name="priority">Priority</string>
+    <string-array name="ticketPriority">
+        <item>urgent</item>
+        <item>high</item>
+        <item>normal</item>
+        <item>low</item>
+    </string-array>
+    <!--Change Language-->
+    <string-array name="langContents">
+        <item>ENGLISH</item>
+        <item>FRANÇAIS</item>
+        <item>ESPAÑOL</item>
+        <item>عربى</item>
+
+    </string-array>
+    <string-array name="langCode">
+        <item>en</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>ar</item>
+
+    </string-array>
+    <string name="categories">Categories</string>
+
+    <string name="your_list">Your lists</string>
+    <string name="new_list">Create a New List</string>
+
+    <string name="storeDist">from this store</string>
+    <string name="freeDelivery">Free Delivery</string>
+    <string name="minDelError">Please add more product for </string>
+    <string name="reachMinDel">to reach minimum order</string>
+    <string name="orderType">Order type</string>
+    <string name="timeFilter">Time filter</string>
+
+    <!--Filter BottomSheet-->
+
+    <string name="brand">Brand</string>
+    <string name="manufacture">Manufacturer</string>
+    <string name="category">Category</string>
+    <string name="price">Price</string>
+    <string name="offer">Offer</string>
+    <string name="popular">Popular</string>
+    <string name="newest">Newest</string>
+    <string name="lowToHigh">Price: Low to High</string>
+    <string name="highToLow">Price: High to Low</string>
+    <!--search frag-->
+    <string name="apply_small">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="zero">0</string>
+
+
+    <string name="promocode">Promocode</string>
+    <string name="moreDetail">More Detail</string>
+    <string name="validity">VALID TILL</string>
+    <string name="how_it_work">How it works?</string>
+    <string name="OkGotIt">OK, Got It</string>
+    <string name="away">away from </string>
+    <string name="freeDelApplicable">Free delivery applicable</string>
+    <string name="minDel">away from minimum order for this store</string>
+
+    <string name="flexyCoin">DelivX Wallet</string>
+    <string name="cards">Credit/Debit Cards</string>
+    <string name="HELP">Help</string>
+    <string name="ratings">Review</string>
+    <string name="newUpdate">Please update your app to the latest available version.</string>
+    <string name="go_to_cart">Go To Cart</string>
+
+    <string name="ideal">Ideal</string>
+    <string name="idealPayment">Ideal Payment</string>
+    <string name="orders">All Orders</string>
+    <string name="payment">Payment</string>
+    <string name="store_rating">Store Rating</string>
+    <string name="and_up">and Up</string>
+    <string name="only">Only</string>
+    <string name="all_stores">All Stores</string>
+    <string name="minOrder">Min Order</string>
+    <string name="distance">Distance</string>
+    <string name="forTwo">For Two</string>
+    <string name="min">Min</string>
+    <string name="tab">-</string>
+    <string name="maxLimit">Maximum limit</string>
+    <string name="addonsDes1">Select minimum of</string>
+    <string name="addonsDes2">and maximum of</string>
+    <string name="addonsDes3">option</string>
+    <string name="sortAndFilter">Filter</string>
+    <string name="priceLowToHigh">Price : Low to High</string>
+    <string name="priceHighToLow">Price : High to Low</string>
+    <string name="cuisine">Cuisines</string>
+    <string name="driver_details">Driver Details</string>
+    <string name="live_status">Live Status</string>
+
+
+    <string name="order_placed">Order Placed.</string>
+    <string name="manager_accepted">Manager accepted.</string>
+    <string name="booking_accepted_by_driver">Booking accepted by driver.</string>
+    <string name="driver_enroute_to_store">Driver enroute to store.</string>
+    <string name="driver_is_at_store">Driver is at the store.</string>
+    <string name="driver_enroute_to_delivery_location">Drive enroute to delivery locationData.</string>
+    <string name="driver_reached_delivery_location">Driver has reached the delivery locationData.</string>
+    <string name="order_completed">Completed (Delivery).</string>
+    <string name="customize">Customize</string>
+    <string name="your_location">Your Location</string>
+    <string name="new_order_part1">Sit back and relax.</string>
+    <string name="new_order_part2">usually accepts orders very quickly</string>
+    <string name="driver_will_be_assigned">A driver will soon be assigned to pick up your order.</string>
+    <string name="driver_assigned">is going to pick up your order.</string>
+    <string name="driver_reached_rest">has reached the restaurant and is picking up the order.</string>
+    <string name="call_driver1">Feel free to call</string>
+    <string name="call_driver2">for real time updates.</string>
+    <string name="delivered_order">has delivered your order.</string>
+    <string name="help_driver2">for his service?</string>
+    <string name="tap_to_pay_tip">Tap an amount.</string>
+    <string name="help_driver1">Would you like to tip</string>
+    <string name="payment_successful">Payment\nSuccessful</string>
+    <string name="tip_msg">Put a smile on your rider\'s face by adding a small amount for delivering your order. The entire amount will be transferred to</string>
+    <string name="tip">Tip</string>
+    <string name="select_tip_smt">Select a tip amount</string>
+    <string name="thanks_tip">Thank you for the tip to</string>
+    <string name="send_tip_msg">will be sent to him at the end of the week.</string>
+    <string name="free_del_applicable">Free Delivery applicable</string>
+    <string name="other_hint">Enter a nickname (e.g. bae\'s home)</string>
+    <string name="customisable">Customize</string>
+    <string name="driver_enroute_cust">is enroute to delivery locationData.</string>
+    <string name="driver_to_store">is Enroute to Store.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--E-com-->
+    <!--HomeScreen-->
+    <string name="homeSearchProducts">Search products and brands</string>
+    <string name="searchBrands">Search brands</string>
+
+    <string name="homeBestSellers">Best Sellers</string>
+    <string name="homeViewMore">View More</string>
+    <string name="homeNewArrivals">New Arrivals</string>
+    <string name="homeTopBrands">Top Brands</string>
+    <string name="homeTrending">Trending</string>
+
+    <!-- login-->
+    <string name="login">Login</string>
+    <string name="loginWithFb">Login with Facebook</string>
+    <string name="loginWithGoogle">Login with Google</string>
+    <string name="loginWithNumber">Login with Phone Number</string>
+    <string name="loginWithEmail">Login with Email</string>
+
+    <string name="loginEmail">Email</string>
+    <string name="allPhoneNumber">Phone</string>
+    <string name="allContinue">Continue</string>
+    <string name="loginPassWord">Password</string>
+    <string name="loginForgotPassword">Forgot Password?</string>
+    <string name="loginShow">Show</string>
+    <string name="loginHide">Hide</string>
+    <string name="loginOr">Or Connect With</string>
+    <string name="loginDontHaveAccountSwipe">Don’t have an account?</string>
+    <string name="loginCreateNewAccount">Create One.</string>
+    <string name="enterValidEmail">Please enter valid email</string>
+    <string name="loginEnterOtp">Please enter 4 digits otp.</string>
+    <string name="loginEnterPassword">Please enter password.</string>
+    <string name="loginResend">Resend</string>
+
+
+    <!-- signUp-->
+    <string name="signUp">Sign Up</string>
+    <string name="signUpName">Name*</string>
+    <string name="signUpEmail">Email*</string>
+    <string name="signUpPhoneNumber">Phone Number*</string>
+    <string name="signUpPassword">Password*</string>
+    <string name="signUpConPassword">Confirm Password *</string>
+    <string name="signUpTermsAndCon">Terms and Conditions</string>
+    <string name="signUpPrivacyPolicy">Privacy Policies</string>
+    <string name="signUpAccept">I Accept</string>
+    <string name="and">and</string>
+    <string name="signUpEnterValidName">please enter valid name</string>
+    <string name="signUpEnterValidPhoneNum">please enter valid phonenumber</string>
+    <string name="signUpPhoneNumExist">The entered phoneNumber is already existed.</string>
+    <string name="signUpEmailExist">this email address is already registered ,please try another one.</string>
+
+    <string name="signUpAcceptTermsAndCon">please accept terms and conditions</string>
+    <string name="signUpLoginOr">OR</string>
+    <string name="signUpLoginDontHaveAccountSwipe">Don’t have an account? Swipe right to </string>
+    <string name="signUpLoginCreateNewAccount">create a new account.</string>
+    <string name="signUpPasswordMisMatch">Passwords Mismatch.</string>
+    <string name="emptyName">Name can\'t be empty</string>
+    <string name="invalidName">Invalid name</string>
+    <string name="emailAlreadyExists">Email already exists</string>
+    <string name="invalidEmail">Invalid email</string>
+    <string name="phoneAlreadyExists">Phone number already exists</string>
+    <string name="invalidPhone">Invalid phone</string>
+    <string name="invalidPassLength">Password is too short</string>
+    <string name="passNotMatch">Both passwords doesn\'t match</string>
+
+    <!-- resetPassword-->
+    <string name="resetPasswordTitle">Reset Password</string>
+    <string name="resetPasswordDescription">Choose a method to reset your password</string>
+    <string name="resetPasswordPhone">phone</string>
+    <string name="resetPasswordEmail">Email</string>
+    <string name="resetPasswordYourPhoneNum">Your Phone Number?</string>
+    <string name="resetPasswordPhoneDecs">Enter the Phone Number your registered with and we will send you the Verification Code reset your password</string>
+
+    <string name="resetPasswordCheckYourMail">Check Your Mail</string>
+    <string name="resetPasswordWhatYourMailId">What’s Your Mail Id?</string>
+    <string name="resetPasswordMailIdDecs">Enter the email your registered with and we will send you the link to reset your password</string>
+    <string name="resetPasswordSendMail">Send Mail</string>
+    <string name="resetPasswordResendCodeIn">Resend Code In:</string>
+
+    <string name="loginForgotPasswordPhone">Phone</string>
+    <string name="forgotPasswordVerfyPhoneNum">Mobile Verification</string>
+    <string name="forgotPasswordVerfyPhoneNumMsg">Verification Code has been sent to your number</string>
+    <string name="forgotPasswordNewPass">New Password</string>
+    <string name="forgotPasswordRepeatNewPass">Repeat New Password</string>
+    <string name="forgotPasswordConfirmNewPass">Confirm New password</string>
+    <string name="forgotPasswordCurrentPass">Current Password</string>
+    <string name="forgotPasswordReset">Reset</string>
+    <string name="forgotPasswordPhoneNumberChanged">Phone Number Changed</string>
+    <string name="forgotPasswordPasswordChanged">Password Changed</string>
+
+    <string name="forgotPasswordSucess">Reset password successful</string>
+    <string name="forgotPasswordSucessDesc">You can now log using your new password and enjoy shopping</string>
+    <string name="forgotPasswordGotoHome">Go to home</string>
+    <string name="forgotPasswordSuccessTitle">Successfully Registered</string>
+    <string name="forgotPasswordSuccessDesc">You can now Enjoy shopping</string>
+
+    <string name="loginForgotPasswordEmail">Email</string>
+    <string name="loginResetPasswordText">Reset Password</string>
+    <string name="loginResetPasswordDescription">Choose a method to reset your password</string>
+    <string name="loginResetPasswordMailDes">We have sent you the link to</string>
+    <string name="ResetPasswordEntervalidOtp">please enter valid Otp</string>
+
+
+    <!--all reviews-->
+    <string name="allReviews">All Reviews</string>
+    <string name="all_submit">Submit</string>
+    <string name="all_reviews_Most_helpful">Most Helpful</string>
+
+    <string name="shopByCategory">SHOP BY CATEGORY</string>
+    <string name="onOffer">ON OFFER</string>
+    <string name="productFilter">Filter</string>
+    <string name="shopBycat">Shop By Category</string>
+    <string name="sortBy">Sort By</string>
+    <string name="changeMailInfo">To change your mail we need your confirmation. Access your mail and validate the change</string>
+    <string name="newEmail">New email</string>
+    <string name="changePassword">Change Password</string>
+    <string name="generalInformation">General Information</string>
+    <string name="personalInformation">Personal Information</string>
+
+    <!--    ProductFilterActivity-->
+    <string name="productsFound">Products found</string>
+    <string name="ordersFound">Orders found</string>
+
+    <string name="version">Version: $</string>
+    <string name="productListProductNotFound">Sorry Products Not Found!!</string>
+    <string name="productFilterHeader">Filters</string>
+    <string name="filterClearFilters">Clear Filters</string>
+    <string name="clearAll">Clear All</string>
+
+    <!--    Add Addres-->
+    <string name="validAddressError">Address should not be empty</string>
+    <string name="validPostalCodeError">Postal Code should not be empty</string>
+    <string name="validCityNameError">City Name should not be empty</string>
+    <string name="validCountryNameError">Country Name should not be empty</string>
+    <string name="validAreaNameError">Area Name should not be empty</string>
+    <string name="make_default">Make Default</string>
+    <string name="defaultAddress">Default</string>
+    <string name="addNewAddress">Add New Address</string>
+    <string name="editAddress">Edit Address</string>
+    <string name="manageAddressTitle">Manage Addresses</string>
+    <string name="confirmAddressTitle">Confirm Delivery Address</string>
+    <string name="locationDenyError">Can\'t access locationData from map if you deny Location permission</string>
+    <string name="referFriendTitle">Invite a friend, Earn Rewards</string>
+    <string name="referFriendTapToCopy">Tap on code to copy</string>
+    <string name="wishListSearchHint">Search list</string>
+    <string name="logoutWarning">Are you sure you want to Logout From Shoppd?</string>
+    <string name="continueShopping">Continue Shopping</string>
+    <string name="noItemsMessage">No items yet</string>
+    <string name="emptyWishListMsg">Simply browse and tap on the heart icon</string>
+    <string name="clipboardSuccess">Your code is copied</string>
+    <string name="useCode">Use code:</string>
+    <string name="visit">Visit</string>
+    <string name="toInstall">to install</string>
+    <string name="emptyAddressMsg">No Addresses Found</string>
+    <string name="deleteAddressWarning">Are you sure you want to delete this address?</string>
+    <string name="addressHomeType">Home</string>
+    <string name="addressWorkType">Work</string>
+    <string name="addressOther">Other eg: Parent\'s home</string>
+    <string name="otherAddressHint">eg: Parent\'s home</string>
+    <string name="addressName">Name*</string>
+    <string name="addressLine1">Address Line 1*</string>
+    <string name="addressLine2">Address Line 2</string>
+    <string name="addressArea">Area*</string>
+    <string name="addressCity">City/District*</string>
+    <string name="addressCountry">Country*</string>
+    <string name="addressPostalCode">Postal Code*</string>
+    <string name="addressLandMark">Land Mark</string>
+    <string name="addressType">Address Type</string>
+    <string name="referFriendQuote">Share the Love by inviting you Friends and earn bonus points</string>
+    <string name="flat">FLAT</string>
+    <string name="upto">UPTO</string>
+    <string name="outOfStock">OUT OF STOCK</string>
+    <string name="allCategories">All Categories</string>
+    <string name="eCommerce">E-commerce</string>
+    <string name="grocer">Grocer</string>
+
+    <string-array name="product_quantiy">
+        <item>2 Pcs</item>
+        <item>3 Pcs</item>
+        <item>4 Pcs</item>
+        <item>5 Pcs</item>
+    </string-array>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+
+    <string-array name="sort_types">
+        <item>Relevance</item>
+        <item>Popularity</item>
+        <item>Price — Low to High</item>
+        <item>Price — High to Low</item>
+        <item>Newest First</item>
+    </string-array>
+    <!--PDP-->
+    <string name="pdpAllDetails">All Details</string>
+    <string name="pdpColors">Colors</string>
+
+    <string name="pdpHighlights">HighLights :</string>
+    <string name="pdpHighlightsTitle">HighLights</string>
+
+    <string name="pdpSpecifications">Specifications</string>
+    <string name="pdpRatingReviews"><![CDATA[Ratings & Reviews]]></string>
+    <string name="allRateProduct">Rate Product</string>
+    <string name="rateSeller">Rate Seller</string>
+
+    <string name="pdpSellerInformation">Seller Information</string>
+    <string name="pdpAlsoViewed">People Also Viewed</string>
+    <string name="pdpBuyNow">Buy Now</string>
+    <string name="pdpStore">Store</string>
+    <string name="pdpAddToCart">Add To Cart</string>
+    <string name="pdpAddGoCart">Go To Cart</string>
+    <string name="pdpAddToCartWarning">you are exceeding the limit,we don\'t have that much stock.</string>
+    <string name="pdpAboutSeller">About the seller</string>
+    <string name="pdpTermsAndConditions">Terms &amp; Conditions</string>
+    <string name="pdpSellerSince">Seller since</string>
+    <string name="pdpSellerScore">Seller score is calculated based on customer feedback and seller performance</string>
+    <string name="pdpMoreSellers">More Sellers</string>
+    <string name="allView">View</string>
+    <string name="pdpOnOffer">on offer</string>
+    <string name="pdpFlat">Flat</string>
+    <string name="pdpRatings">ratings</string>
+    <string name="pdpReviews">reviews</string>
+    <string name="pdpOnUpto">Upto</string>
+    <string name="pdpOutOff">out of</string>
+    <string name="pdpOutOffStock">Out Of Stock</string>
+    <string name="pdpNotifyMe">Notify me</string>
+    <string name="pdpNotifyMessage">Get notified as soon as the product is available again</string>
+    <string name="pdpPleaseEnterMail">Please Enter Email Address</string>
+
+    <string name="pdpOff">Off</string>
+    <string name="pdpCapacity">Capacity</string>
+    <string name="pdpSizeChart">Size Chart</string>
+
+
+    <!--all details-->
+    <string name="allDetails">All Details</string>
+
+    <!--    ProductFilterActivity-->
+    <string name="products_found">Products found</string>
+    <string name="product_list_product_not_found">Sorry Products Not Found!!</string>
+    <string name="product_filter_header">Filters</string>
+    <string name="filter_clear_filters">Clear Filters</string>
+
+
+    <!--review product-->
+    <string name="allTakePhoto">Take Photo</string>
+    <string name="allChooseFromGallery">Choose from Gallery</string>
+    <string name="allCancel">Cancel</string>
+    <string name="allAddPhoto">Add Photo!</string>
+    <string name="allDone">Done</string>
+    <string name="allDescription">Description</string>
+    <string name="reviewProduct">Review Product</string>
+    <string name="reviewSeller">Review Seller</string>
+    <string name="reviewProductAll">All</string>
+    <string name="menuFlagAsAbusive">Flag as abusive</string>
+    <string name="allTitle">Title</string>
+    <string name="reviewProductOverall">Overall</string>
+    <string name="reviewProductTitleHint">Enter title.</string>
+    <string name="reviewProductDescHint">Enter description.</string>
+    <string name="reviewAboutSeller">Review about Seller.</string>
+
+    <string name="reviewProductTitle">Haven\'t purchased this product?</string>
+    <string name="reviewProductDesc">Sorry! You are not allowed to review this product since you haven\'t bought it on Our Site.</string>
+    <string name="reviewProductShopNow">shop now</string>
+    <string name="reviewProductHangOn">Hang on, loading content</string>
+    <string name="updateProfileEmailSuccTitle">Email Address Changed</string>
+    <string name="updateProfileEmailSuccDesc">we need your confirmation. Access your mail and validate the change </string>
+    <string name="clearFilterWarning">Are you sure you want to clear all selected filter values?</string>
+    <string name="deleteWishlistItemWarning">Are you sure you want to delete this product from your wish list?</string>
+    <string name="cleaAllWishList">Are you sure you want to clear all your wishList products?</string>
+    <string name="overallRating">Overall Rating: </string>
+    <string name="viewMoreSellersSoldBy">Sold by: </string>
+    <string name="sellerSince">Seller Since</string>
+    <string name="searchText">Searching…</string>
+    <string name="scanAgain">Scan Again</string>
+    <string name="searchMessage">Try rewording your search or entering a new keyword</string>
+    <string name="searchLabel">OOOps! Item not found</string>
+    <string name="myCart">My Cart</string>
+    <string name="permissionPromptMsg">If you deny this permission, basic features of this app may no longer function as intended</string>
+    <string name="denyBtnText">DENY</string>
+    <string name="settingsBtnTxt">SETTINGS</string>
+    <string name="allowBtnTxt">ALLOW</string>
+    <string name="imageLoadingError">Unable to load this image</string>
+    <string name="cartRemove">Remove</string>
+    <string name="cartPriceDetils">Price Details</string>
+    <string name="cartShippingFee">Shipping Fee</string>
+    <string name="cartSavings">Your savings</string>
+    <string name="cartOrderTotal">Total After tax</string>
+    <string name="cartTaxDetails">Tax Details (Included)</string>
+    <string name="cartOrderSubTotal">Total before tax</string>
+    <string name="cartAddAddress">Add Address</string>
+    <string name="cartEmptyTitle">There\'s nothing in your cart</string>
+    <string name="cartContinueShopping">Continue shopping</string>
+    <string name="cartPlaceOrder">Place order</string>
+    <string name="cartTotalAmt">Total Amount</string>
+    <string name="cartChange">Change</string>
+    <string name="cartOfferAppiled">1 offer Applied</string>
+    <string name="customizations">Customizations</string>
+    <!--payment method-->
+    <string name="paymentMentodTotalAmt">Total amount to be paid:</string>
+    <string name="allPaymentMethod">Payment Method</string>
+    <string name="pmWallet">Wallet</string>
+    <string name="pmPayOnDel">Pay On Delivery</string>
+    <!--CONFIRM ORDER-->
+    <string name="allTotal">Total</string>
+    <string name="confirmOrder">Confirm Order</string>
+    <string name="payMentMethod">Payment method</string>
+    <string name="payMentBreakDown">Payment Breakdown</string>
+    <string name="confirmOrderlSuccess">Order Placed successfully</string>
+    <string name="confirmOrderCashOnDel">Cash On Delivery</string>
+    <string name="confirmAndPlaceOrder">Confirm &amp; place order</string>
+    <!--history screen-->
+    <string name="historyMyOrders">My Orders</string>
+    <string name="historySearchList">Search list</string>
+    <string name="historyOrderNo">ORDER No:</string>
+    <string name="historyStoreName">Store Name</string>
+    <string name="historyRateNow">Rate Now</string>
+    <string name="historyEditReview">Edit Review</string>
+    <string name="historyStoreOrderId">Store Order ID:</string>
+    <string name="historyProductOrderId">Product ID:</string>
+    <string name="historyShipmentId">Shipment Id:</string>
+    <string name="allDesription">Description</string>
+    <string name="historyStoreReOrder">Reorder</string>
+    <string name="historyStoreCancel">Cancel</string>
+    <string name="historyShippingAlongWith">Shipped along with</string>
+    <string name="historyTrackShipment">Track Shipment</string>
+    <string name="historyBillingAddress">Billing Address</string>
+    <string name="allId">PO ID:</string>
+    <string name="allOrderDetails">Order Details</string>
+    <string name="allOtherSellers">Other Sellers</string>
+    <string name="allMore">More</string>
+    <string name="allTaxes">Taxes :</string>
+    <string name="historyDetailOrderNo">Order No : </string>
+    <string name="historyCancelOrder">Cancel Item</string>
+    <string name="historyReOrder">Re Order</string>
+    <string name="historyReturnProduct">Return Product</string>
+    <string name="reviewSomeThingAboutSeller">Tell something about the seller</string>
+    <string name="cancelReasonForCancellation">Reason For Cancellation</string>
+    <string name="cancelOrderComments">Comments(Optional)</string>
+    <string name="cancelOrderRefundStatus">Refund Status</string>
+    <string name="cancelSubmitRequest">Submit Request</string>
+    <string name="cancelRefundStatusText">There will be no refund as the order is purchased using Cash-On-Delivery</string>
+    <string name="cancelProduct">Cancel Product</string>
+    <string name="selectReason">Select Reason</string>
+    <string name="pleaseSelectReason">Please Select one Reason</string>
+    <string name="tracking">Tracking</string>
+    <string name="downLoadInvoice">Download Invoice</string>
+    <string name="pleaseLogin">Please login</string>
+    <string name="allTime">Time</string>
+    <string name="openOrders">Open orders</string>
+    <string name="compltedOrders">Completed orders</string>
+
+    <string name="cancelledOrders">Cancelled orders</string>
+    <string name="availabeBalance">Available Balance</string>
+    <string name="invoice">Invoice Details</string>
+    <string name="enterAmt">Enter Amount</string>
+    <string name="transactionId">TXN ID:</string>
+    <string name="noTransactionsYet">No Transactions Yet</string>
+
+
+    <string-array name="history_filter_types">
+        <item>Last 30 Days</item>
+        <item>Last 6 months</item>
+
+    </string-array>
+    <string name="emptyHistory">No History Found</string>
+    <string name="emptyNotification">No Notifications Yet</string>
+
+    <string name="selectCard">Select Card</string>
+    <string name="debitOrCreditCard">Debit/Credit Card</string>
+    <string name="noCardsFound">No Cards Found</string>
+    <string name="addCard">Add Card</string>
+    <string name="card">Card</string>
+    <string name="ending">ending</string>
+    <string name="deleteCardWarning">Are you sure you want to delete this Card?</string>
+    <string name="CardSelectWarning">Please select Card or Pay on delivery</string>
+    <string name="addMoneyConfirmation">Are you sure you want to recharge your wallet with</string>
+    <string name="added">Added</string>
+    <string name="addMoneySuccess">wallet amount successfully</string>
+    <string name="deliverTo">Deliver To</string>
+    <string name="sameAsDeliveryAdress">Same as Delivery address</string>
+    <string name="notificaions">Notifications</string>
+    <string name="pandingShipment">Pending Shipment</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="storeCancelled">Store Cancelled </string>
+    <string name="reason">Reason</string>
+    <string name="box">Box</string>
+    <string name="packageId">PID</string>
+    <string name="allBrands">All Brands</string>
+    <string name="noFaqFound">No Faq\'s found</string>
+    <string name="available">Available</string>
+    <string name="applyPromoCode">Apply Promocode</string>
+    <string name="selectPromoCode">Select Promocode</string>
+    <string name="enterPromoCode">Enter promo code</string>
+    <string name="promotionsApplied">Promotions Applied</string>
+    <string name="emailNotExist">Oops ! Seems like this email is not registered with us, please try signing up or try entering a different email </string>
+    <string name="phoneNotExist">Oops ! Seems like this phone number is not registered with us, please try signing up or try entering a different phone number </string>
+    <string name="reTry">Retry</string>
+    <string name="updateError">You need to update the app mandatory</string>
+    <string name="minPasswordLength">min length: 8 characters</string>
+    <string name="availableOffers">Available offers</string>
+    <string name="tAndC">T&amp;C</string>
+    <string name="continueText">Continue</string>
+    <string name="message">message</string>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/five_dp"
+        android:id="@+id/clMain"
+        android:background="@drawable/bay_color_border"
+        android:layout_width="@dimen/hundred_ten_dp"
+        android:layout_marginStart="@dimen/seven_dp"
+        android:layout_height="@dimen/hundred_dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_margin="@dimen/two_dp"
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:src="@drawable/bottle_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

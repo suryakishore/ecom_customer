@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.customer.fivecanale.changelang.ChangeLangActivity">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.changelang.ChangeLanViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+                <ImageView
+                    android:id="@+id/ivToolbarBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="toolBack"
+                    android:paddingTop="@dimen/ten_dp"
+                    app:srcCompat="@drawable/all_back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="@string/language"
+                    android:textColor="@color/portGore"
+                    android:textSize="@dimen/twenty_sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:id="@+id/view_top_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@drawable/shadow_top_layout"
+            android:visibility="invisible" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_top_shadow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rlToolbarDummy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:descendantFocusability="blocksDescendants"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/fifteen_dp"
+                        android:layout_marginLeft="@dimen/fifteen_dp"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="@string/language"
+                        android:textColor="@color/portGore"
+                        android:textSize="@dimen/twentyFive_sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:background="@drawable/shadow_top_layout"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/langLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:background="@color/whisper"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{viewmodel.progressVisible}" />
+    </RelativeLayout>
+
+</layout>

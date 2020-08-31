@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenCloseStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/athensGray"
+            android:paddingLeft="@dimen/sixteen_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingRight="@dimen/sixteen_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/helpSend"
+            android:textColor="@color/colorMineShaft"
+            android:textSize="@dimen/fourteen_sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sixteen_dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHelpText"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/black_circle"
+                android:backgroundTint="@color/app_color"
+                android:gravity="center"
+                android:text="A"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve_sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHelpSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_toStartOf="@id/tvHelpTime"
+                android:layout_toLeftOf="@id/tvHelpTime"
+                android:layout_toEndOf="@+id/tvHelpText"
+                android:layout_toRightOf="@+id/tvHelpText"
+                android:gravity="start"
+                android:text="@string/helpSubject"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorMineShaft"
+                android:textSize="@dimen/twelve_sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHelpDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHelpSubject"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_toEndOf="@+id/tvHelpText"
+                android:layout_toRightOf="@+id/tvHelpText"
+                android:textSize="@dimen/twelve_sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHelpTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/twelve_sp" />
+
+            <View
+                android:id="@+id/idView"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tvHelpDate"
+                android:layout_marginTop="@dimen/sixteen_dp"
+                android:background="@color/colorDoveGray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

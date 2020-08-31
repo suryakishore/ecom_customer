@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/fifteen_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTransactionId"
+            style="@style/Text.13sp.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/availabeBalance"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookingId"
+            style="@style/Text.13sp.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransactionId"
+            tools:text="@string/availabeBalance" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTransactionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBookingId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTransactionId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTransactionDes"
+            style="@style/Text.15sp.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/eighteen_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBookingId"
+            tools:text="Gravida lacus quisque" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTransactionDate"
+            style="@style/Text.13sp.DimGray.PoppinsLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransactionDes"
+            tools:text="dATE: 24/JUNE/2019 20:42" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTransactionAmt"
+            style="@style/Text.13sp.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTransactionDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTransactionDate"
+            tools:text="USD 484.63" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_dp"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:background="@color/colorSilver1"
+            app:layout_constraintTop_toBottomOf="@+id/tvTransactionDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

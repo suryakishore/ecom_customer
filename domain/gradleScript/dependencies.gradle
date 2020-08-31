@@ -1,0 +1,10 @@
+import dependencies.Deps
+
+dependencies {
+
+    //Rxjava
+    implementation Deps.RxJava.rxjava2
+
+    implementation Deps.javax
+    implementation Deps.javaxjsr250
+}

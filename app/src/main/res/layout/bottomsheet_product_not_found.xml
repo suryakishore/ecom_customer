@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBtmSheetMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/incEmptyScreen"
+            layout="@layout/empty_screen" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCloseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:src="@drawable/all_cross_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnScanAgain"
+            style="@style/Text.13sp.White.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginBottom="@dimen/fourty_five_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:paddingStart="@dimen/thirtyFive_dp"
+            android:paddingEnd="@dimen/thirtyFive_dp"
+            android:text="@string/scanAgain"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incEmptyScreen" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

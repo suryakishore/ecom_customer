@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com">
+
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name="com.customer.fivecanale.ApplicationManager"
+        android:allowBackup="false"
+        android:icon="@drawable/launch"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/launch"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name="com.customer.fivecanale.splash.SplashActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.customer.fivecanale.allbrands.AllBrandsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+
+        <activity
+            android:name="com.customer.fivecanale.pdp.ProductDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.mqtt_chat.ChattingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name="eu.janmuller.android.simplecropimage.CropImage"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.customer.fivecanale.cart.EcomCartActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.customer.fivecanale.payment.PaymentMethodActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.customer.fivecanale.review.ReviewProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.customer.fivecanale.preview.PreviewImageActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name="com.customer.fivecanale.promocode.PromoCodesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+
+        <activity
+            android:name="com.customer.fivecanale.orderdetails.HistoryOrderDetailActivity"
+
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.historyproductdetail.HistoryProductDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.cancelorder.CancelOrderOrProductActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.selectreason.SelectReasonActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.tracking.EcomTrackingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.historyfilter.HistoryOrderFilterActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.wallet.EcomWalletActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.customer.fivecanale.savedcards.SavedCardsActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.customer.fivecanale.notifications.NotificationsActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".customer.fivecanale.alldetails.AllDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.customer.fivecanale.addmoney.EcomAddMoneyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <activity
+            android:name="com.customer.fivecanale.allreviews.AllReviewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.boarding.login.EcomLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".customer.fivecanale.boarding.register.EcomSignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".customer.fivecanale.manageaddress.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name=".customer.fivecanale.boarding.forgotpassword.EcomForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".customer.fivecanale.category.CategoryViewMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.uiutil.barcodescanning.BarCodePreviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.referfriend.ReferFriendActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.trending.TrendingProductsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.landing.searchscreen.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.addresslist.SavedAddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.recentlyviewed.RecentlyViewedProductsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.search.CategoryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.allcategory.AllCategoryActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".customer.fivecanale.filter.ProductFilterActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".customer.fivecanale.productlist.ProductListingActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".customer.fivecanale.landing.profile.profiledetails.updateprofile.UpdateProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customer.fivecanale.landing.profile.profiledetails.ProfileDetailsActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".customer.fivecanale.wishlist.WishListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+
+        <activity
+            android:name=".customer.fivecanale.landing.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="shoppd.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_default_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCthbl5itvLfAJ_TBl_arySgjKSHUpeWoE" />
+
+        <!--<meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="d10711215d5a970c67c4f76641fef0cccf62b92d" />-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_ID" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".customer.fivecanale.pdp.imagezoom.ZoomImageAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.webview.WebViewAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.fivecanale.changelang.ChangeLangActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".customer.fivecanale.help.HelpActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".customer.fivecanale.help.helpsubcategory.HelpSubCatActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".customer.fivecanale.helpcenter.HelpIndexActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <service
+            android:name=".customer.fivecanale.fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true" /> <!-- **************************************************************************************************************** -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+
+</manifest>

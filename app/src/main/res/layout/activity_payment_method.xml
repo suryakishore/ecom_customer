@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.payment.PaymentMethodViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include
+            android:id="@+id/includePaymentMethodHeader"
+            layout="@layout/layout_cross_btn_header"
+            bind:viewModel="@{viewmodel}" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPmContinue"
+            app:layout_constraintTop_toBottomOf="@+id/includePaymentMethodHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/allWhiteColor">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPMTotalAmt"
+                    style="@style/Text.16sp.Black.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:background="@color/colorProductBackground"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingTop="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/zero_dp"
+                    android:paddingBottom="@dimen/fifteen_dp"
+                    android:text="@string/paymentMentodTotalAmt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPmAmt"
+                    style="@style/Text.16sp.Black.PoppinsSemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorProductBackground"
+                    android:paddingStart="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:paddingBottom="@dimen/fifteen_dp"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPMTotalAmt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/tvPMTotalAmt"
+                    app:layout_constraintStart_toEndOf="@+id/tvPMTotalAmt"
+                    app:layout_constraintTop_toTopOf="@+id/tvPMTotalAmt"
+                    tools:text="$ 41684.33" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/tvPMCheckBox"
+                    style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:checkBox="@{viewmodel.payFromWallet}"
+                    android:background="@color/colorProductBackground"
+                    android:drawablePadding="@dimen/ten_dp"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:onClick="@{() -> viewmodel.walletClick()}"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingLeft="@dimen/twenty_dp"
+                    android:paddingTop="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:paddingRight="@dimen/twenty_dp"
+                    android:paddingBottom="@dimen/fifteen_dp"
+                    android:text="@string/pmWallet"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    app:drawableEndCompat="@drawable/ic_cash_on_delivery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPMTotalAmt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvWalletAmt"
+                    style="@style/Text.16sp.Black.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/fiftyFive_dp"
+                    android:text="$0.00"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPMCheckBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvPMCheckBox" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddMoney"
+                    style="@style/Text.13sp.SpeechBlue.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:background="@drawable/square_round_silver_border"
+                    android:onClick="@{() -> viewmodel.addMoneyClick()}"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/eight_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/eight_dp"
+                    android:text="@string/addMoney"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPMCheckBox" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPMCard"
+                    style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:background="@color/colorProductBackground"
+                    android:drawablePadding="@dimen/ten_dp"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingTop="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:paddingBottom="@dimen/fifteen_dp"
+                    android:text="@string/card"
+                    app:drawableEndCompat="@drawable/ic_cash_on_delivery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddMoney" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSavedCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPMCard" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddCard"
+                    style="@style/Text.13sp.SpeechBlue.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:background="@drawable/square_round_silver_border"
+                    android:onClick="@{() -> viewmodel.addCardClick()}"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/eight_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/eight_dp"
+                    android:text="@string/addCard"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvSavedCards" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tvPMPayOnDel"
+                    style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:RadioButton="@{viewmodel.payOnDeliveryState}"
+                    android:background="@color/colorProductBackground"
+                    android:drawablePadding="@dimen/ten_dp"
+                    android:gravity="center_vertical"
+                    android:layoutDirection="rtl"
+                    android:onClick="@{() -> viewmodel.payOnDeliveryClick()}"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingLeft="@dimen/twenty_dp"
+                    android:paddingTop="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:paddingRight="@dimen/twenty_dp"
+                    android:paddingBottom="@dimen/fifteen_dp"
+                    android:text="@string/pmPayOnDel"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    app:drawableEndCompat="@drawable/ic_cash_on_delivery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddCard" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPmContinue"
+            style="@style/Text.14sp.colorWhite.regular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:background="@drawable/ripple_pdp_color_eastbay_selector"
+            android:btnEnabled="@{viewmodel.btnEnabled}"
+            android:onClick="@{() -> viewmodel.continueClick()}"
+            android:text="@string/allContinue"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewmodel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

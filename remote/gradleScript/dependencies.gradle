@@ -1,0 +1,13 @@
+import dependencies.Deps
+
+dependencies {
+
+
+    //Retrofit
+    implementation Deps.OkHttp3.loggingInterceptor
+    implementation Deps.Retrofit2.adapterRxjava2
+    implementation Deps.Retrofit2.converterGson
+    implementation Deps.Retrofit2.retrofit
+
+
+}

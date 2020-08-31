@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="@dimen/two_dp"
+            android:paddingBottom="@dimen/fifteen_dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/five_dp"
+                android:onClick="onClickListener"
+                android:src="@drawable/all_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCatName"
+                style="@style/Text.16sp.Black.PoppinsSemiBold"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                app:layout_constraintEnd_toStartOf="@+id/tvPlpSearch"
+                app:layout_constraintStart_toEndOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="@+id/ivBack"
+                tools:text="Cookwares" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvPlpSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twentyFive_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvPlpCart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/plp_search_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvPlpCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twentyFive_dp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/plp_cart_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.customer.fivecanale.util.ShimmerLayout
+            android:id="@+id/productListShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clHeader">
+
+            <include layout="@layout/cat_view_more_shimmer" />
+        </com.customer.fivecanale.util.ShimmerLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentlyViewedList"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/seven_dp"
+            android:layout_marginEnd="@dimen/seven_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clHeader"
+            app:spanCount="2"
+            android:layout_marginBottom="@dimen/fifteen_dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

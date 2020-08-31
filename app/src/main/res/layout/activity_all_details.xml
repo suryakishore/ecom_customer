@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.fivecanale.alldetails.AllDetailsActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.alldetails.AllDetailsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAllDetActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/five_dp"
+            android:minHeight="?actionBarSize"
+            android:paddingBottom="@dimen/five_dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAllDetailsCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginEnd="@dimen/zero_dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="@{() -> viewModel.onCrossIconClicked()}"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/all_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAllDetTitle"
+                style="@style/Text.18sp.Nero.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:includeFontPadding="false"
+                android:text="@string/allDetails"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/viewAllDetTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/five_dp"
+            android:background="@drawable/shadow_below"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clAllDetActionBar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:clipChildren="true"
+            android:paddingBottom="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/sixty_dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgAllDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="ivAllDetProduct,ivAllDetProduct,vgAllDetOfferPrice,tvAllDetProductActualPrice,tvAllDetProductColor,viewAllDetBottom" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAllDetProduct"
+                    android:layout_width="@dimen/fifty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@{viewModel.mProductImage, default=@drawable/logo}" />
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgAllDetOfferPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="viewPrice,tvAllDetOfferPrice" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllDetProductName"
+                    style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    app:layout_constraintLeft_toRightOf="@+id/ivAllDetProduct"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="KISHORE" />
+
+                <View
+                    android:id="@+id/viewPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/one_dp"
+                    android:layout_marginTop="@dimen/twelve_dp"
+                    android:background="@color/allNobelColor"
+                    app:layout_constraintEnd_toEndOf="@+id/tvAllDetOfferPrice"
+                    app:layout_constraintLeft_toRightOf="@+id/tvAllDetProductActualPrice"
+                    app:layout_constraintStart_toStartOf="@+id/tvAllDetOfferPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAllDetProductColor" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllDetProductActualPrice"
+                    style="@style/Text.18sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintLeft_toRightOf="@+id/ivAllDetProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAllDetProductColor"
+                    tools:text="2,087.00" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllDetOfferPrice"
+                    style="@style/Text.12sp.Gey.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAllDetProductActualPrice"
+                    app:layout_constraintStart_toEndOf="@id/tvAllDetProductActualPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvAllDetProductActualPrice"
+                    tools:text="354.98" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllDetProductColor"
+                    style="@style/Text.14sp.DimGray.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/one_dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintLeft_toRightOf="@+id/ivAllDetProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAllDetProductName"
+                    tools:text="blue" />
+
+                <View
+                    android:id="@+id/viewAllDetBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivAllDetProduct" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllDetAttributes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/viewAllDetBottom" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

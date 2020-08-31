@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.landing.searchscreen.SearchViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHomeTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/one_dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSearchHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHomeAppLogo"
+                android:layout_width="@dimen/thirty_dp"
+                android:layout_height="@dimen/thirty_dp"
+                android:background="@drawable/ecom_home_round_default"
+                android:src="@drawable/launch"
+                app:layout_constraintBottom_toBottomOf="@+id/etHomeSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etHomeSearch"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginEnd="@dimen/one_dp"
+                android:background="@color/allLightGreyColor"
+                android:drawableStart="@drawable/ecom_home_search"
+                android:drawablePadding="@dimen/ten_dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/homeSearchProducts"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/ten_dp"
+                android:textColorHint="@color/allGreyColor"
+                android:textSize="@dimen/thirteen_sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvSearchCancel"
+                app:layout_constraintStart_toEndOf="@+id/ivHomeAppLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearchBarCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etHomeSearch"
+                app:layout_constraintEnd_toStartOf="@+id/ivSearchNotification"
+                app:layout_constraintTop_toTopOf="@+id/etHomeSearch"
+                app:srcCompat="@drawable/ecom_home_barcode_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearchNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etHomeSearch"
+                app:layout_constraintEnd_toEndOf="@+id/etHomeSearch"
+                app:layout_constraintTop_toTopOf="@+id/etHomeSearch"
+                app:srcCompat="@drawable/ic_notication_icon" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotificationCount"
+                style="@style/Text.11sp.White.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/carticon_badge"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/six_dp"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/five_dp"
+                android:paddingTop="@dimen/two_dp"
+                android:paddingEnd="@dimen/five_dp"
+                android:paddingBottom="@dimen/two_dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="2" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSearchCancel"
+                style="@style/Text.14sp.colorBlackApprox.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:text="@string/allCancel"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/etHomeSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etHomeSearch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.landing.profile.profiledetails.ProfileDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewmodel}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/twenty_dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/twenty_dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileDetailsInfo"
+            style="@style/Text.20sp.BlackApproxColor.poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:text="@string/personalInformation"
+            app:layout_constraintStart_toStartOf="@+id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProfileDetailsPic"
+            android:layout_width="@dimen/seventy_dp"
+            android:layout_height="@dimen/seventy_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:onClick="onClick"
+            android:src="@drawable/ecom_profile_holder"
+            app:layout_constraintStart_toStartOf="@+id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfileDetailsInfo" />
+
+
+        <ProgressBar
+            android:id="@+id/pbProfilePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewmodel.mIsShowProgress}"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfileDetailsPic"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfileDetailsPic"
+            app:layout_constraintStart_toStartOf="@+id/ivProfileDetailsPic"
+            app:layout_constraintTop_toTopOf="@+id/ivProfileDetailsPic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUpdateProfilePic"
+            android:layout_width="@dimen/twentyFive_dp"
+            android:layout_height="@dimen/twentyFive_dp"
+            android:onClick="onClick"
+            android:translationX="@dimen/ten_dp"
+            android:translationY="-5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfileDetailsPic"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfileDetailsPic"
+            app:layout_constraintTop_toTopOf="@+id/ivProfileDetailsPic"
+            app:srcCompat="@drawable/ic_camera_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileDetailsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/signUpName"
+            android:onClick="@{viewmodel::onHandleClick}"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfileDetailsPic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsName"
+                style="@style/Text.15sp.ApproxBlack.poppinsReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/arrow_right"
+                android:drawablePadding="@dimen/five_dp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:onClick="@{viewmodel::onHandleClick}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileDetailsEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/signUpEmail"
+            android:onClick="@{viewmodel::onHandleClick}"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tilProfileDetailsName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsEMail"
+                style="@style/Text.15sp.ApproxBlack.poppinsReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/arrow_right"
+                android:drawablePadding="@dimen/five_dp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:onClick="@{viewmodel::onHandleClick}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.customer.fivecanale.uiutil.CustomTextInputLayout
+            android:id="@+id/tilProfileDetailsMob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/signUpPhoneNumber"
+            android:onClick="@{viewmodel::onHandleClick}"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+            app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tilProfileDetailsEMail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsMob"
+                style="@style/Text.15sp.ApproxBlack.poppinsReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/white_dot"
+                android:drawableEnd="@drawable/arrow_right"
+                android:drawablePadding="@dimen/sixty_five_dp"
+                android:inputType="phone"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:onClick="@{viewmodel::onHandleClick}" />
+        </com.customer.fivecanale.uiutil.CustomTextInputLayout>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccpGetNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="false"
+            android:translationY="@dimen/four_dp"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_clickable="false"
+            app:ccp_contentColor="@color/colorBlackApprox"
+            app:ccp_hintExampleNumber="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/fifteen_sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tilProfileDetailsMob"
+            app:layout_constraintStart_toStartOf="@+id/tilProfileDetailsMob"
+            app:layout_constraintTop_toTopOf="@+id/tilProfileDetailsMob" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileDetailsChangePass"
+            style="@style/Text.12sp.BaseAppColor.poppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:background="@drawable/square_round_silver_border"
+            android:onClick="@{viewmodel::onHandleClick}"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:paddingBottom="@dimen/eight_dp"
+            android:text="@string/changePassword"
+            app:layout_constraintStart_toStartOf="@id/guideLineBegin"
+            app:layout_constraintTop_toBottomOf="@+id/tilProfileDetailsMob" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

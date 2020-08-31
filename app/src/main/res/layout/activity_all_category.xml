@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.allcategory.AllCategoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+        <com.customer.fivecanale.util.ShimmerLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <include
+                layout="@layout/shimmer_all_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+        </com.customer.fivecanale.util.ShimmerLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategory"
+            android:layout_width="@dimen/ninety_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:background="@color/desert_storm"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:id="@+id/tvTopBrands"
+            style="@style/Text.14sp.Black.PoppinsMed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/twelve_dp"
+            android:text="Hot Brands"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/rvCategory"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBrandList"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTopBrands"
+            app:layout_constraintTop_toBottomOf="@+id/tvTopBrands"
+            app:spanCount="3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubCatList"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rvCategory"
+            app:layout_constraintTop_toBottomOf="@+id/rvBrandList" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

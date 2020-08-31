@@ -1,0 +1,40 @@
+ {
+  "project_info": {
+    "project_number": "747970721945",
+    "firebase_url": "https://shoppd-c7fd0.firebaseio.com",
+    "project_id": "shoppd-c7fd0",
+    "storage_bucket": "shoppd-c7fd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747970721945:android:d9e4f8d3552037b514e008",
+        "android_client_info": {
+          "package_name": "com.customer.shoppd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747970721945-pbluu8pr3euildvchh9oqr6d4f8g7aje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGX5WtkvDNTt9Pde-FUXR_0gT00W3-y3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747970721945-pbluu8pr3euildvchh9oqr6d4f8g7aje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

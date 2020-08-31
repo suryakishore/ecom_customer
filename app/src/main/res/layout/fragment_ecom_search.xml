@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.landing.searchscreen.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/incSearchHeader"
+            layout="@layout/home_search_header"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            bind:viewModel="@{viewModel}" />
+
+        <include
+            android:id="@+id/incEmptyScreen"
+            layout="@layout/empty_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/incSearchHeader" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCatHeader"
+            style="@style/Text.10sp.DoveGray.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incSearchHeader" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/seven_dp"
+            android:background="@color/altoLight"
+            app:layout_constraintTop_toBottomOf="@+id/tvCatHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategoryList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCatHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCatHeader" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecentSearchHeading"
+            style="@style/Text.10sp.DoveGray.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/recentSearches"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incSearchHeader" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentSearchSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentSearchHeading" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

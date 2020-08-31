@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.webview.WebViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/action_bar" />
+
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/action_bar"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:id="@+id/svWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/action_bar"
+            android:layout_marginTop="@dimen/five_dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHtmlView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginRight="@dimen/fifteen_dp"
+                android:htmlText="@{viewmodel.termsOrPrivacyData}">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="@{viewmodel.progressVisible}" />
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHomeHorzProduct"
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/twentyFive_dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:background="@color/shimmer_background_color" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/twentyFive_dp"
+            android:background="@color/shimmer_background_color" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSecondRow"
+            app:layout_constraintTop_toBottomOf="@+id/ivHomeHorzProduct"
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/twentyFive_dp"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:background="@color/shimmer_background_color" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSecondRow"
+            app:layout_constraintTop_toTopOf="@+id/ivSecondRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/twentyFive_dp"
+            android:background="@color/shimmer_background_color" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivThirdRow"
+            app:layout_constraintTop_toBottomOf="@+id/ivSecondRow"
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/twentyFive_dp"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:background="@color/shimmer_background_color" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/one_sixty_dp"
+            android:layout_height="@dimen/one_sixty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivThirdRow"
+            app:layout_constraintTop_toTopOf="@+id/ivThirdRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/twentyFive_dp"
+            android:background="@color/shimmer_background_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

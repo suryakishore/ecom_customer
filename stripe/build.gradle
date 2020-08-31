@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: "$rootDir/ktlint.gradle"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        def serverPropertiesFile = rootProject.file("server.properties");
+        def serverProperties = new Properties()
+        serverProperties.load(new FileInputStream(serverPropertiesFile))
+
+        release {
+            buildConfigField "String", "STRIPE_SERVER", serverProperties['STRIPE_SERVER']
+            buildConfigField "String", "PUBLISHABLE_KEY", serverProperties['PUBLISHABLE_KEY']
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "STRIPE_SERVER", serverProperties['STRIPE_SERVER']
+            buildConfigField "String", "PUBLISHABLE_KEY", serverProperties['PUBLISHABLE_KEY']
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+   /* packagingOptions {
+        exclude 'META-INF/stripe_release.kotlin_module'
+    }*/
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Stripe Android SDK
+    implementation 'com.stripe:stripe-android:12.8.2'
+
+    // OkHttp & GSON
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    /*google*/
+    implementation 'com.google.android.gms:play-services-wallet:18.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+}

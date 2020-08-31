@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.referfriend.ReferFriendViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/incRefFriendHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReferFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/seventy_dp"
+            android:src="@drawable/ic_refer_friend"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incRefFriendHeader" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReferFriendTitle"
+            style="@style/Text.21sp.ApproxCodGray.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/referFriendTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivReferFriend" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReferFriendDesc"
+            style="@style/Text.14sp.SilverChalice.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:gravity="center"
+            android:text="@string/referFriendQuote"
+            app:layout_constraintEnd_toEndOf="@+id/tvReferFriendTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvReferFriendTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvReferFriendTitle" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReferFriendCode"
+            style="@style/Text.20sp.AppColor.ProductSansBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:background="@drawable/dash_line_border"
+            android:onClick="onClick"
+            android:padding="@dimen/ten_dp"
+            android:text="IBRAALDOBI1242"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReferFriendDesc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCopyToClip"
+            style="@style/Text.12sp.DustyGray.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:onClick="onClick"
+            android:text="@string/referFriendTapToCopy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReferFriendCode" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShareReferralCode"
+            style="@style/Text.12sp.White.PoppinsSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:onClick="onClick"
+            android:text="@string/referFriendShare"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

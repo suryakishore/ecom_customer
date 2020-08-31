@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?><!--<androidx.cardview.widget.CardView -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProductMain"
+        android:layout_width="@dimen/oneFifty_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/seven_dp"
+        android:layout_marginEnd="@dimen/seven_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:background="@drawable/white_bag"
+        android:elevation="@dimen/two_dp"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHomeItemProducts"
+            android:layout_width="@dimen/hundred_dp"
+            android:layout_height="@dimen/hundred_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@color/colorProductBackgroundDetails"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:padding="@dimen/five_dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/nine_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="UPTO 20% OFF" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemProductCategories"
+            style="@style/Text.8sp.ApproxGray.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/seven_dp"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivHomeItemProducts"
+            tools:text="Kitchen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemProductName"
+            style="@style/Text.12sp.Black.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeItemProductCategories"
+            tools:text="Vehicula lobortis Vehicula" />
+
+        <RatingBar
+            android:id="@+id/rbHomeItemProductRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            android:layout_marginStart="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeItemProductName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemProductPrice"
+            style="@style/Text.12sp.BlackApprox.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/five_dp"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rbHomeItemProductRatings"
+            tools:text="$535.52" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHomeItemProductOfferPrice"
+            style="@style/Text.9sp.DarkGray.PoppinsRegular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/two_dp"
+            android:ellipsize="end"
+            android:paddingStart="@dimen/zero_dp"
+            android:paddingEnd="@dimen/five_dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHomeItemProductPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvHomeItemProductPrice"
+            app:layout_constraintTop_toTopOf="@id/tvHomeItemProductPrice"
+            tools:text="$535.52"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDealTimer"
+            style="@style/Text.10sp.HippieGreen.PoppinsMedium"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/four_dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/tvHomeItemProductPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvHomeItemProductPrice"
+            tools:text="Deal Ends in: 02:53:18" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHomeItemAddProduct"
+            style="@style/Text.12sp.PersianBlue.PoppinsReg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:background="@drawable/bay_color_border"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDealTimer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddRemoveProducts"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:background="@drawable/ecom_products_add_quantity"
+            android:padding="@dimen/five_dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHomeItemProductPrice">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHomeItemRemoveProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five_dp"
+                android:background="@drawable/ecom_product_remove_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHomeItemProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twelve_sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="22" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHomeItemAddProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:background="@drawable/ecom_product_add_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/tvDealTimer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clShadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:background="#80E9E7E7"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOutOfStock"
+            style="@style/Text.10sp.Red.PoppinsRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingTop="@dimen/five_dp"
+            android:paddingBottom="@dimen/five_dp"
+            android:text="@string/outOfStock"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@+id/ivHomeItemProducts"
+            app:layout_constraintBottom_toBottomOf="@+id/ivHomeItemProducts"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

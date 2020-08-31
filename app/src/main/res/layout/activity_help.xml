@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.customer.fivecanale.help.HelpActivity">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.help.HelpViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightWhite">
+
+        <include
+            android:id="@+id/headerView"
+            layout="@layout/action_bar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_empty_faq" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptyFaqMsg"
+            style="@style/Text.12sp.BlckApprox.poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivEmpty"
+            android:layout_centerHorizontal="true"
+            android:text="@string/noFaqFound"
+            android:visibility="gone" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/helpRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headerView"
+            android:layout_margin="@dimen/five_dp" />
+
+
+        <ProgressBar
+            android:id="@+id/pbHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{viewmodel.progressVisible}" />
+    </RelativeLayout>
+
+</layout>

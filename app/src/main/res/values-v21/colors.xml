@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+   <!-- <color name="app_color">#F8BA1A</color>
+    <color name="trans_app_color">#33F8BA1A</color>
+    <color name="white_appColor">#0DF8BA1A</color>
+    <color name="light_app_color">#19ED7A48</color>
+    <color name="colorPrimary">#F8BA1A</color>
+    <color name="colorPrimaryDark">#F8BA1A</color>
+    <color name="colorAccent">#F8BA1A</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="transparent">#00000000</color>
+
+-->
+    <color name="app_color">#393D7F</color>
+    <color name="trans_app_color">#33F8BA1A</color>
+    <color name="white_appColor">#0DF8BA1A</color>
+    <color name="light_app_color">#19ED7A48</color>
+    <color name="colorPrimary">#393D7F</color>
+    <color name="colorPrimaryDark">#393D7F</color>
+    <color name="colorAccent">#393D7F</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="colorPortGore">#1A1945</color>
+    <color name="shimmer_color">#2f878787</color>
+    <color name="shimmer_background_color">#8ddddddd</color>
+
+    <!--<color name="thick_green">#198B9</color>-->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightWhite">#F5F5F5</color>
+    <color name="colorDarkBlack">#222224</color>
+    <color name="lightWhite">#D8D8D8</color>
+    <color name="colourLightCement">#858B92</color>
+    <color name="colourGreen">#5AA43E</color>
+
+    <!--colours for home laundra-->
+    <color name="portGore9">#848484</color>
+
+
+    <!--colours for searchlocation-->
+    <color name="colorLightCement">#747474</color>
+    <color name="colorightWhite">#D5D5D5</color>
+    <color name="colorBlack">#333333</color>
+    <color name="colorMercury">#e1e1e1</color>
+    <color name="colorWillowBrook">#ebf3e8</color>
+    <color name="colorCinnabar">#E23E3E</color>
+    <color name="colorGhost">#BFC5CF</color>
+
+    <color name="colorOsloGray">#858B92</color>
+    <color name="colorDoveGray">#6B6B6B</color>
+    <color name="colorPictonBlue">#4695E6</color>
+    <color name="colorCinnaBar">#EB4242</color>
+    <color name="colorSilver">#C2C2C2</color>
+    <color name="colorMartiniqueapprox">#2B324A</color>
+    <color name="colorRoti">#C9A353</color>
+    <color name="colorwildsand">#f5f5f5</color>
+    <color name="colorShark">#222224</color>
+    <color name="colorBoulder">#747474</color>
+
+
+    <color name="colorAthensGray">#E8EBF0</color>
+    <!--
+        <color name="colorWhisper">#FBFBFD</color>
+    -->
+
+    <color name="colorAlto">#D2D2D2</color>
+
+    <color name="colorTransperentWhite">#61FFFFFF</color>
+
+    <!--<color name="colorWhisper">#F5F6FA</color>-->
+
+    <color name="colorSilverChalice">#ACACAC</color>
+    <color name="colorTondora">#4A4A4A</color>
+    <color name="colorSilver1">#B9B9B9</color>
+    <color name="colorHeavyMetal">#353635</color>
+    <color name="colorRoman">#D95656</color>
+    <color name="colorHeather">#BBC0CE</color>
+
+    <color name="colorTuna">#393A4A</color>
+    <color name="colorWaterloo">#808195</color>
+    <color name="colorMineShaft">#3A3A3A</color>
+    <color name="colorMirage">#1A192F</color>
+    <color name="colorBotticelli">#DFE4EF</color>
+    <color name="colorGayser">#DBE0E7</color>
+    <color name="colorEmerland">#48C16A</color>
+    <color name="colorAluminium">#A8AAB2</color>
+    <color name="colorAquaHaze">#F4F6F9</color>
+    <color name="alto">#D5D5D5</color>
+    <color name="altoLight">#DfDfDf</color>
+    <color name="colorCharade">#2F2E3A</color>
+    <color name="waterloo">#7B8091</color>
+    <color name="white">#FFFFFF</color>
+    <color name="athensGray">#EFF2F4</color>
+    <color name="osloGrayApprox">#868A8C</color>
+    <color name="heather">#BFC9D3</color>
+    <!--ListSearchFragment Color-->
+    <color name="colorChalice">#FFA5A5A5</color>
+    <color name="colorTrout">#535766</color>
+    <color name="ebonyClay">#FF282C3F</color>
+
+    <!--Flexy HomeActivity-->
+    <color name="cornflowerBlue">#6195ED</color>
+    <color name="illusion">#F798C4</color>
+    <color name="portGore">#242A4B</color>
+
+    <!--Flexy Restaurants Screen-->
+    <color name="manatee">#858AA8</color>
+    <color name="silver">#C1C1C1</color>
+    <color name="gallery">#EDEDED</color>
+    <color name="webOrange">#FFA800</color>
+    <color name="dodgerBlue">#3197FD</color>
+    <color name="mantis">#63CB63</color>
+    <color name="whisper">#EFF0F7</color>
+    <color name="lightWhisper">#f8f9fb</color>
+    <color name="comet">#606477</color>
+    <color name="sunsetOrange">#F83E3E</color>
+    <color name="pigeonPost">#B8BDDD</color>
+    <color name="laPalma">#16962F</color>
+    <color name="bianca">#FDFBF7</color>
+
+    <!--HelpCenter-->
+    <color name="red_login_dark">#F52D3A</color>
+    <color name="saffron">#FAA433</color>
+    <color name="livemblue3498">#FF3498DB</color>
+    <color name="green_continue">#1fc055</color>
+
+    <!--Alpha colors for NestedScroll view-->
+    <color name="portGore1">#11242A4B</color>
+    <color name="portGore2">#22242A4B</color>
+    <color name="portGore3">#33242A4B</color>
+    <color name="portGore4">#44242A4B</color>
+    <color name="portGore5">#66242A4B</color>
+    <color name="portGore6">#88242A4B</color>
+    <color name="portGore7">#99242A4B</color>
+    <color name="portGore8">#bb242A4B</color>
+
+
+    <color name="colorMandy">#E96363</color>
+    <color name="colorCornFlowerBlue">#4F86EB</color>
+
+
+    <!--Ecom-->
+    <!--All-->
+    <color name="allWhiteColor">#FFFFFF</color>
+    <color name="allLightGreyColor">#F5F5F5</color>
+    <color name="allGreyColor">#AEAEAE</color>
+    <color name="allBlackColor">#000000</color>
+
+    <!--Home-->
+    <color name="cornflower_blue">#6D6DE6</color>
+
+</resources>
+
+

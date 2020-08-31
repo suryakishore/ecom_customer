@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white"
+    >
+
+
+    <item>
+
+        <selector>
+
+
+            <item
+                android:drawable="@drawable/rectangle_gray_bordered"
+                android:state_enabled="true" />
+            <item
+                android:drawable="@drawable/rectangle_alto_bordered"
+                android:state_enabled="false" />
+            <item
+                android:drawable="@drawable/rectangle_alto_bordered"
+                android:state_pressed="true" />
+            <item
+                android:drawable="@drawable/rectangle_alto_bordered"
+                android:state_focused="true" />
+            <item android:drawable="@drawable/rectangle_alto_bordered" />
+
+        </selector>
+
+    </item>
+
+
+</ripple>

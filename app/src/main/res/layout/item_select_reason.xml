@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButton"
+            style="@style/Text.14sp.ApproxBlack.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layoutDirection="rtl"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            tools:text="Radio Button 1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

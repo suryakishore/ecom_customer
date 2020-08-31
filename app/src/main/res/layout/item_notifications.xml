@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProductImg"
+            android:layout_width="@dimen/seventy_dp"
+            android:layout_height="@dimen/seventy_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:src="@drawable/bottle_img"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStatusTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvProductStatus" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="@dimen/ten_dp"
+            android:layout_height="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:background="@drawable/carticon_badge"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProductStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvProductStatus">
+
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductStatus"
+            style="@style/Text.14sp.Tondara.PoppinsMed"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@+id/ivStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Product Delivered" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStatusDesc"
+            style="@style/Text.12sp.Tondara.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toStartOf="@+id/ivProductImg"
+            app:layout_constraintStart_toStartOf="@+id/ivStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductStatus"
+            tools:text="Your package contains bata brown flats has been delivered. Thanks for shopping !" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStatusTime"
+            style="@style/Text.10sp.CadetBlue.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@+id/ivStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusDesc"
+            tools:text="2 days ago" />
+
+        <View
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/one_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@color/colorMercury"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvStatusTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

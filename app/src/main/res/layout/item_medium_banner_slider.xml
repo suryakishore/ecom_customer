@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/three_twenty_dp"
+        android:id="@+id/cvOfferBanner"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHomeSliding"
+            android:layout_width="@dimen/three_twenty_dp"
+            android:layout_height="@dimen/oneFifty_dp"
+            android:scaleType="fitXY" />
+
+    </androidx.cardview.widget.CardView>
+</layout>

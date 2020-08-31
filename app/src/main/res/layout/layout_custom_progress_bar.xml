@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="progressViewModel"
+            type="com.customer.fivecanale.pdp.ProductDetailsViewModel" />
+
+        <variable
+            name="reviewViewModel"
+            type="com.customer.fivecanale.review.ReviewProductViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.landing.cartscreen.CartViewModel" />
+        <variable
+            name="customProgress"
+            type="com.customer.fivecanale.historyproductdetail.HistoryProductDetailViewModel" />
+
+        <variable
+            name="customHomeProgress"
+            type="com.customer.fivecanale.landing.HomeModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor"
+        android:visibilityProductDetail="@{customProgress.progressVisible}"
+        android:visible="@{viewModel.getCartprogress}"
+        android:vis="@{reviewViewModel.progressVisible}"
+        android:visibility="@{progressViewModel.progressVisible}"
+        android:visibilityHome="@{customHomeProgress.progressVisible}"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

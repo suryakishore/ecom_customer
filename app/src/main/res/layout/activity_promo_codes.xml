@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.customer.fivecanale.promocode.PromoCodesViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor"
+        >
+
+        <include
+            android:id="@+id/includePromoCodeHeader"
+            layout="@layout/layout_cross_btn_header"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:viewModel="@{viewmodel}" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPromoCode"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginLeft="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginRight="@dimen/twenty_dp"
+            android:background="@drawable/rectangle_silver_chalice_bordered"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includePromoCodeHeader">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPromoCode"
+                style="@style/Text.18sp.Black.PoppinsMed"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_dp"
+                android:background="@color/transparent"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:hint="@string/enterPromoCode"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvApply"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvApply"
+                style="@style/Text.16sp.AppColor.PoppinsBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                android:text="@string/apply"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@+id/etPromoCode"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etPromoCode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAvailableTxt"
+            style="@style/Text.20sp.Black.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/available"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clPromoCode" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPromoCodes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAvailableTxt" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewmodel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

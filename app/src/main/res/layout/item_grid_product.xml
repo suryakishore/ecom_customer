@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGridListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0.5dp"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/ten_dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_sixty_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOnOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@color/hippie_green"
+            android:paddingStart="@dimen/twenty_dp"
+            android:paddingTop="@dimen/five_dp"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/five_dp"
+            android:text="@string/onOffer"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBrandName"
+            style="@style/Text.12sp.Gray.PoppinsMed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/five_dp"
+            app:layout_constraintStart_toStartOf="@+id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@+id/ivProductImage"
+            tools:text="Prestige" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            style="@style/Text.12sp.Black.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:lines="2"
+            android:maxLines="2"
+            android:paddingEnd="@dimen/ten_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvBrandName"
+            tools:text="Rhoncus sodales" />
+
+        <RatingBar
+            android:id="@+id/rbHomeItemProductRatings"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="@+id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFinalPrice"
+            style="@style/Text.16sp.Black.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@+id/rbHomeItemProductRatings"
+            tools:text="$249" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActualPrice"
+            style="@style/Text.10sp.Gray.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/five_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFinalPrice"
+            app:layout_constraintStart_toEndOf="@+id/tvFinalPrice"
+            app:layout_constraintTop_toTopOf="@+id/tvFinalPrice"
+            tools:text="$249" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHomeItemAddProduct"
+            style="@style/Text.12sp.PersianBlue.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:background="@drawable/bay_color_border"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFinalPrice" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clShadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:background="#80E9E7E7"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOutOfStock"
+            style="@style/Text.10sp.Red.PoppinsRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingTop="@dimen/five_dp"
+            android:paddingBottom="@dimen/five_dp"
+            android:text="@string/outOfStock"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductImage"
+            app:layout_constraintTop_toTopOf="@+id/ivProductImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

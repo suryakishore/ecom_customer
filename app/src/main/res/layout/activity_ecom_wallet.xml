@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.wallet.WalletModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAvailableBalTxt"
+            style="@style/Text.14sp.ApproxBlack.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/availabeBalance"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAvailableBal"
+            style="@style/Text.24sp.BlackApprox.poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAvailableBalTxt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddMoney"
+            style="@style/Text.14sp.White.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:paddingStart="@dimen/twentyFive_dp"
+            android:paddingEnd="@dimen/twentyFive_dp"
+            android:text="@string/addMoney"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAvailableBal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvAvailableBalTxt" />
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/five_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@drawable/shadow_below"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAvailableBal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecentTransactions"
+            style="@style/Text.20sp.BlackApproxColor.poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/recentTransction"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTop" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabEcomWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentTransactions">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:id="@+id/viewTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_dp"
+            android:background="@color/colorSilver1"
+            app:layout_constraintTop_toBottomOf="@+id/tabEcomWallet" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpWallet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTab" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

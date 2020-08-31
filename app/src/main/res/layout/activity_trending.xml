@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.trending.TrendingProductsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/includeTrendingHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrendingProducts"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/includeTrendingHeader" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

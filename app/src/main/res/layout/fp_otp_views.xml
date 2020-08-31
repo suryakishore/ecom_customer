@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="otpViewsModel"
+            type="com.customer.fivecanale.boarding.forgotpassword.EcomForgotPasswordViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOtpViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etResetPassSec"
+        style="@style/Text.32sp.colorDarkBlue.poppinsRegular"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:onTextChanged="@{otpViewsModel::onTextChangeOtpSec}"
+        android:paddingTop="@dimen/five_dp"
+        app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etResetPassFir"
+        style="@style/Text.32sp.colorDarkBlue.poppinsRegular"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:onTextChanged="@{otpViewsModel::onTextChangeOtpFir}"
+        android:paddingTop="@dimen/five_dp"
+        app:layout_constraintRight_toLeftOf="@+id/etResetPassSec" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etResetPassThi"
+        style="@style/Text.32sp.colorDarkBlue.poppinsRegular"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:onTextChanged="@{otpViewsModel::onTextChangeOtpThi}"
+        android:paddingTop="@dimen/five_dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etResetPassFour"
+        style="@style/Text.32sp.colorDarkBlue.poppinsRegular"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:onTextChanged="@{otpViewsModel::onTextChangeOtpFour}"
+        android:paddingTop="@dimen/five_dp"
+        app:layout_constraintLeft_toRightOf="@+id/etResetPassThi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

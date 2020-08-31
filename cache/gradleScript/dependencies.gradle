@@ -1,0 +1,7 @@
+import dependencies.Deps
+
+dependencies {
+    api Deps.Room.room_run_time
+    implementation Deps.Room.room_rxjava
+    annotationProcessor Deps.Room.room_compiler
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clRecentMain"
+        android:paddingTop="@dimen/fifteen_dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRecentIcon"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:paddingEnd="@dimen/fifteen_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSuggestionCatName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRecentSuggestion"
+            app:srcCompat="@drawable/ic_recent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecentSuggestion"
+            style="@style/Text.12sp.Black.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:drawablePadding="@dimen/ten_dp"
+            app:layout_constraintEnd_toStartOf="@+id/ivSuggestionArrow"
+            app:layout_constraintStart_toEndOf="@+id/ivRecentIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mobiles" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:id="@+id/ivSuggestionArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSuggestionCatName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvRecentSuggestion"
+            app:layout_constraintTop_toTopOf="@+id/tvRecentSuggestion"
+            app:srcCompat="@drawable/ic_right_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSuggestionCatName"
+            style="@style/Text.12sp.AppColor.PoppinsReg"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@+id/ivSuggestionArrow"
+            app:layout_constraintStart_toStartOf="@+id/tvRecentSuggestion"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentSuggestion"
+            tools:text="in Coffee and Tea Maker" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@color/galleryApprox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSuggestionCatName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

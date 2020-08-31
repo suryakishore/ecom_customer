@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.fivecanale.addmoney.EcomAddMoneyActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.addmoney.AddMoneyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddMomey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEnterAmtTxt"
+            style="@style/Text.20sp.BlackApproxColor.poppins_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/enterAmt"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEnteredAmt"
+            style="@style/Text.20sp.BlackApproxColor.poppins_bold"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/rectangle_black_stroke"
+            android:includeFontPadding="false"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/twenty_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/zero_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvCurrencySymbol"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrencySymbol"
+            app:layout_constraintTop_toBottomOf="@+id/tvEnterAmtTxt"
+            tools:text="240" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCurrencySymbol"
+            style="@style/Text.14sp.colorBlackApprox.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:background="@drawable/rectangle_black_stroke_gallery_bag"
+            android:drawablePadding="@dimen/ten_dp"
+            android:drawableTint="@color/allBlackColor"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:text="INR"
+            android:textAllCaps="false"
+            app:drawableEndCompat="@drawable/down_arrow_svg"
+            app:layout_constraintBottom_toBottomOf="@+id/etEnteredAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etEnteredAmt" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/Text.12sp.White.PoppinsSemiBold"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:text="@string/allContinue"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

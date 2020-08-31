@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOrderItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_titan_white"
+            android:paddingStart="@dimen/twenty_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHistoryMyOrders"
+                style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/historyOrderNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderNo"
+                style="@style/Text.16sp.EastBay.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five_dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/tvHistoryMyOrders"
+                app:layout_constraintStart_toEndOf="@+id/tvHistoryMyOrders"
+                app:layout_constraintTop_toTopOf="@+id/tvHistoryMyOrders" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderTime"
+                style="@style/Text.12sp.Nero.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="5th June 2019 10:32am"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHistoryMyOrders" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/eight_dp"
+                android:layout_height="@dimen/eight_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/all_right_arrow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOrderStores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clOrderItem" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

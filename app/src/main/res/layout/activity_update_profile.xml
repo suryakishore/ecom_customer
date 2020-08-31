@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.landing.profile.profiledetails.updateprofile.UpdateProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ErrorMsg="@{viewModel.errorMsg}"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_cross_btn_header"
+            bind:viewModel="@{viewModel}" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileDetailsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:ErrorMessage="@{viewModel.nameValidation}"
+            android:hint="@string/signUpName"
+            android:visibility="gone"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsName"
+                style="@style/Text.13sp.ApproxBlack.PoppinsMed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:onTextChanged="@{viewModel::onTextChanged}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileDetailsEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:ErrorMessage="@{viewModel.mailValidation}"
+            android:hint="@string/newEmail"
+            android:visibility="gone"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsEMail"
+                style="@style/Text.13sp.ApproxBlack.PoppinsMed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:onTextChanged="@{viewModel::onTextChanged}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.customer.fivecanale.uiutil.CustomTextInputLayout
+            android:id="@+id/tilProfileDetailsMob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:hint="@string/signUpPhoneNumber"
+            android:visibility="gone"
+            app:hintTextAppearance="@style/Text.12sp.OsloGray.PoppinsReg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileDetailsMob"
+                style="@style/Text.15sp.ApproxBlack.poppinsReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:drawableStart="@drawable/white_dot"
+                android:drawablePadding="@dimen/sixty_five_dp"
+                android:onTextChanged="@{viewModel::onTextChanged}" />
+        </com.customer.fivecanale.uiutil.CustomTextInputLayout>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccpGetNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="false"
+            android:translationY="@dimen/four_dp"
+            android:visibility="gone"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_clickable="false"
+            app:ccp_contentColor="@color/colorBlackApprox"
+            app:ccp_hintExampleNumber="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/fifteen_sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tilProfileDetailsMob"
+            app:layout_constraintStart_toStartOf="@+id/tilProfileDetailsMob"
+            app:layout_constraintTop_toTopOf="@+id/tilProfileDetailsMob" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUpdate"
+            style="@style/Text.12sp.White.PoppinsRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:btnEnabled="@{viewModel.isEnableButton}"
+            android:onClick="@{viewModel::updateName}"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@+id/tilProfileDetailsName"
+            app:layout_goneMarginTop="@dimen/hundred_dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMailText"
+            style="@style/Text.12sp.CapeCod.PoppinsLight"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:layout_marginTop="@dimen/seventeen_dp"
+            android:layout_marginEnd="@dimen/thirty_dp"
+            android:gravity="center"
+            android:text="@string/changeMailInfo"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgUpdateProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="header,btnUpdate" />
+
+        <include
+            android:id="@+id/successUpdateProfile"
+            layout="@layout/success"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

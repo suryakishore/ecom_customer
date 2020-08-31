@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.customer.fivecanale.allreviews.AllReviewsActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.allreviews.AllReviewsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAllReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/five_dp"
+            android:paddingBottom="@dimen/five_dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAllReviewsCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginEnd="@dimen/zero_dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="@{() -> viewModel.onCrossIconClicked()}"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/all_cross_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Text.18sp.Nero.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/allReviews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewDummy1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twentyThree_dp"
+            android:background="@drawable/rectangle_blue_rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clActionBar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/tvAllReviewsLoading"
+            app:layout_constraintTop_toBottomOf="@+id/viewDummy1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp"
+                    app:cardBackgroundColor="@color/colorProductBackgroundDetails"
+                    app:cardCornerRadius="@dimen/twenty_dp"
+                    app:cardElevation="@dimen/five_dp"
+                    app:layout_constraintBottom_toTopOf="@+id/viewRating"
+                    app:layout_constraintEnd_toStartOf="@+id/viewDummy6"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAllRviewsRating"
+                        style="@style/Text.18sp.White.PoppinsRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/pdp_rating_start"
+                        android:drawablePadding="@dimen/five_dp"
+                        android:gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:paddingStart="@dimen/fifteen_dp"
+                        android:paddingTop="@dimen/five_dp"
+                        android:paddingEnd="@dimen/fifteen_dp"
+                        android:paddingBottom="@dimen/five_dp"
+                        tools:text="4.5" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/viewRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/allWhiteColor"
+                    app:layout_constraintBottom_toBottomOf="@id/rvAllReviewsRatingDistribution"
+                    app:layout_constraintTop_toTopOf="@id/rvAllReviewsRatingDistribution" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllReviewDetails"
+                    style="@style/Text.12sp.Gey.PoppinsRegular"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewRating"
+                    tools:text="2,19,063 ratings and 33,597 reviews" />
+
+                <View
+                    android:id="@+id/viewDummy6"
+                    android:layout_width="@dimen/one_dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/twentyFive_dp"
+                    android:layout_marginEnd="@dimen/ten_dp"
+                    android:layout_marginBottom="@dimen/twentyFive_dp"
+                    android:background="@color/colorProductGallerysolid"
+                    app:layout_constraintBottom_toTopOf="@+id/viewDummy2"
+                    app:layout_constraintLeft_toRightOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllReviewsRatingDistribution"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@+id/viewDummy2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/viewDummy6"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <View
+                    android:id="@+id/viewDummy2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:background="@color/colorProductGallerysolid"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvAllReviewsRatingDistribution" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllReviewMostHelpFul"
+                    style="@style/Text.16sp.Nero.PoppinsBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:drawablePadding="@dimen/ten_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/all_reviews_Most_helpful"
+                    android:visibility="gone"
+                    app:drawableRightCompat="@drawable/arrow_right"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDummy2" />
+
+                <View
+                    android:id="@+id/viewDummy3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:background="@color/colorProductGallerysolid"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAllReviewMostHelpFul" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAllReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDummy3" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.50" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAllReviewsLoading"
+            style="@style/Text.12sp.NobelTextColor.poppinsLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_blue_rounded_corner"
+            android:gravity="center"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/reviewProductHangOn"
+            android:visibility="@{viewModel.itemLoadingVisible}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

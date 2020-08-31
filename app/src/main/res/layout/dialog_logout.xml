@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/twentyFive_dp"
+    android:layout_marginEnd="@dimen/twentyFive_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/thirty_dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogoutMessage"
+            style="@style/Text.16sp.Black.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            android:layout_marginEnd="@dimen/thirty_dp"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:gravity="center"
+            android:text="@string/logoutWarning"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogout"
+            style="@style/Text.14sp.EastBay.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:background="@drawable/bay_color_border"
+            android:paddingStart="@dimen/fourty_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingEnd="@dimen/fourty_dp"
+            android:paddingBottom="@dimen/eight_dp"
+            android:text="@string/logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogoutMessage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLogoutCancel"
+            style="@style/Text.14sp.White.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:paddingStart="@dimen/fourty_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingEnd="@dimen/fourty_dp"
+            android:paddingBottom="@dimen/eight_dp"
+            android:text="@string/allCancel"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLogout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLogout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

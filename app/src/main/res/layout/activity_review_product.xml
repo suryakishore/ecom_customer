@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".customer.fivecanale.review.ReviewProductActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.review.ReviewProductViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clReviewData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReviewProActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/five_dp"
+            android:minHeight="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivReviewProCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/zero_dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:onClick="@{() -> viewModel.onCrossIconClicked()}"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/all_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReviewProTitle"
+                style="@style/Text.18sp.Nero.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/reviewProduct"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReviewProduct"
+            android:layout_width="@dimen/fifty_dp"
+            android:layout_height="@dimen/sixty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:layout_marginTop="@dimen/twentyFive_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clReviewProActionBar"
+            app:srcCompat="@{viewModel.productImage, default=@drawable/logo}" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReviewProName"
+            style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:text="@{viewModel.productName}"
+            app:layout_constraintLeft_toRightOf="@+id/ivReviewProduct"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clReviewProActionBar"
+            tools:text="" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReviewProPrice"
+            style="@style/Text.16sp.PrimaryTextColor.poppinsemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@{viewModel.productPrice}"
+            app:layout_constraintLeft_toRightOf="@+id/ivReviewProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewProColor" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReviewProColor"
+            style="@style/Text.15sp.Nero.PoppinsRegular"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/one_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@{viewModel.productColor}"
+            app:layout_constraintLeft_toRightOf="@+id/ivReviewProduct"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewProName"
+            tools:text="" />
+
+        <View
+            android:id="@+id/viewReviewProTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:background="@drawable/rectangle_blue_rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivReviewProduct" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewReviewProTop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/fifty_dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewProduct"
+                    style="@style/Text.18sp.Nero.PoppinsBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/allRateProduct"
+                    android:visibility="@{viewModel.rateProductVisible}"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReviewProRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/thirty_dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tvReviewProduct" />
+
+                <View
+                    android:id="@+id/viewReviewProBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/five_dp"
+                    android:background="@drawable/rectangle_blue_rounded_corner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvReviewProRatings" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRateSeller"
+                    style="@style/Text.18sp.Nero.PoppinsBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/rateSeller"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewReviewProBottom" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRateSeller"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/thirty_dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tvRateSeller" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewPro"
+                    style="@style/Text.16sp.Nero.PoppinsBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/reviewProduct"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvRateSeller" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReviewProImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReviewPro" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewDashLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintTop_toBottomOf="@+id/rvReviewProImages" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewProTxt"
+                    style="@style/Text.16sp.Nero.PoppinsBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/allTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDashLine" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etReviewProTitle"
+                    style="@style/Text.13sp.BlackApprox.poppinsRegular"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:hint="@string/reviewProductTitleHint"
+                    android:onTextChanged="@{viewModel::onReviewTitle}"
+                    android:textColorHint="@color/colorAlto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReviewProTxt" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewProDesc"
+                    style="@style/Text.16sp.Nero.PoppinsBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/allDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etReviewProTitle" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etReviewProDesc"
+                    style="@style/Text.13sp.BlackApprox.poppinsRegular"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:hint="@string/reviewProductDescHint"
+                    android:onTextChanged="@{viewModel::onReviewDes}"
+                    android:textColorHint="@color/colorAlto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReviewProDesc" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewSeller"
+                    style="@style/Text.16sp.Nero.PoppinsBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/reviewSeller"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etReviewProDesc" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAboutSeller"
+                    style="@style/Text.14sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/reviewSomeThingAboutSeller"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReviewSeller" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etReviewAboutSeller"
+                    style="@style/Text.13sp.BlackApprox.poppinsRegular"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:hint="@string/reviewAboutSeller"
+                    android:onTextChanged="@{viewModel::aboutSeller}"
+                    android:text="@{viewModel.sellerReview}"
+                    android:textColorHint="@color/colorAlto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAboutSeller" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReviewProSubmit"
+                    style="@style/Text.12dp.PrimaryTextColor.poppins_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/thirty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@drawable/all_ripple_selector"
+                    android:btnEnabled="@{viewModel.btnEnabled}"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="@{() -> viewModel.onSubmitButtonClicked()}"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:text="@string/all_submit"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etReviewAboutSeller" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            layout="@layout/layout_custom_progress_bar"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:reviewViewModel="@{viewModel}" />
+
+        <include
+            android:id="@+id/includeReviewProPurchase"
+            layout="@layout/item_review_purchase_product"
+            android:visibility="gone"
+            bind:viewModel="@{viewModel}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

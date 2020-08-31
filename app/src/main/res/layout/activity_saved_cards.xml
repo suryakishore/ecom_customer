@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.customer.fivecanale.savedcards.SavedCardViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorProductBackground">
+
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+            bind:listener="@{viewModel}"
+
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddMoney"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddNewCard"
+                    style="@style/Text.12sp.White.PoppinsSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:background="@drawable/app_color_rect_ripple_effect"
+                    android:paddingStart="@dimen/fifty_dp"
+                    android:paddingEnd="@dimen/fifty_dp"
+                    android:text="@string/addNewCard"
+                    android:textAllCaps="false"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSavedCardsTxt"
+                    style="@style/Text.16sp.ApproxBlack.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/savedcards"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAddNewCard" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSavedCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSavedCardsTxt" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAddCard"
+                    style="@style/Text.13sp.SpeechBlue.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/thirty_dp"
+                    android:background="@drawable/square_round_silver_border"
+                    android:paddingStart="@dimen/ten_dp"
+                    android:paddingTop="@dimen/eight_dp"
+                    android:paddingEnd="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/eight_dp"
+                    android:text="@string/addCard"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvSavedCards" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddMoney"
+            style="@style/Text.12sp.White.PoppinsSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:enabled="false"
+            android:paddingStart="@dimen/fifty_dp"
+            android:paddingEnd="@dimen/fifty_dp"
+            android:text="@string/addMoney"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmptyAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:src="@drawable/address_empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoCardsFound"
+            style="@style/Text.16sp.Black.PoppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/noCardsFound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEmptyAddress" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgNoCardsFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivEmptyAddress,tvNoCardsFound" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,2 @@
+include ':app', ':simplecrop', ':android-reactive-location', ':remote', ':domain', ':data', ':cache', ':stripe'
+rootProject.name='delivx_ecomm_android_customer_v2'
